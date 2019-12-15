@@ -1,212 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no"">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ff0000">
-    <meta name="theme-color" content="#ffffff">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="assets/favicon/favicon.ico">
 
-    <title>Purva Sane - Portfolio</title>
+        <title>Purva Sane UX Portfolio</title>
 
-    <!-- Google analytics tracking snippet -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-93898603-1', 'auto');
-    ga('send', 'pageview');
-    </script>
+        <!-- Google analytics tracking snippet -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-93898603-1', 'auto');
+        ga('send', 'pageview');
+        </script>
 
-    <!-- JQuery Library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
-    <!-- Bootstrap JS CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!-- Fontawesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!-- Fontawesome CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- Custom files for this template -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-</head>
+        <!-- Custom files -->
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+        <link rel="stylesheet" href="assets/css/style_test.css">
+        
+    </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
-            <a class="navbar-brand" href="index.html">Purva Sane</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="resume" href="assets/files/PurvaSane_Resume.pdf" target="_blank">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <body data-spy="scroll" data-target="#myNavbar" data-offset="50">
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto" id="myNavbar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <div><a class="nav-link" href="assets/files/PurvaSane_Resume.pdf" target="_blank">Resume</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 <!-- *****************************************************************************************************************
 ABOUT 
 ***************************************************************************************************************** -->
-	<div class="jumbotron jumbotron-fluid">
-        <div class="row" id="home">
-            <div class="col-lg-4">
-                <img src="assets/img/profilephoto2.jpg">
-            </div>
-            <div class="col-lg-8 col-md-12 centered" id="herotext">
-                <h1>Hi! I'm Purva Sane</h1>
-                <h2>I'm a UX Designer with a passion for accessibility</h2>
-                <div id="jumbotron-text">
-                    <!-- <p>I’m passionate about creating experiences that engage a broad audience. Currently, I'm work at FedEx as a UX Accessibility Designer.</p> -->
-                    <!-- <p>I’m passionate about creating experiences that engage a broad audience. My first experience with design was 3 years ago, while working as a QA engineer. I collaborated with a UX Designer on our team for a project, and watched him create a product from just an idea. Getting a glimpse at the full UX process, I realized I wanted to pursue a career in UX design. After that, I got my master’s degree in UX Research & Design from the University of Michigan and gained experience working in an agency and later, an in-house team.</p>
-                    <p>Outside of work, I'm an avid reader and photography enthusiast. I enjoy experimenting with food and day dreaming about having a dog.</p>  -->
+    	<main role="main">
+            <section id="home" class="jumbotron jumbotron-fluid" >
+                <div class="row" >
+                    <div class="col-lg-4">
+                        <img id="profile-photo" src="assets/img/profilephoto.jpg">
+                    </div>
+                    <div class="col-lg-8 col-md-12" id="herotext">
+                        <h1>Purva Sane</h1>
+                        <h2><img src="assets/img/hello.svg" id="emoji"> Hi there!!! I'm a UX Designer with a (not-so-secret) passion for making the digital world more inclusive.</h2>
+                        <div id="home-buttons">
+                            <a href="#portfolio" class="btn btn-primary">Projects</a>
+                            <a href="assets/files/PurvaSane_Resume.pdf" class="btn btn-secondary" role="button">Resume</a>
+                        </div>
+                        <div id="social-buttons">
+                            <a href="https://twitter.com/Purva1208" target="_blank"><img src="assets/img/twitter.png"></a>
+                            <a href="https://www.linkedin.com/in/purva-sane" target="_blank"><img src="assets/img/linkedin.png"></a>
+                        </div>
+                    </div>
                 </div>
-                <div id="buttons" class="centered">
-                    <a href="#portfolio" class="btn btn-primary" role="button" onclick="ViewProjects()">View projects</a>
-                    <!-- <a href="#" class="btn btn-primary" role="button">View resume</a> -->
-                </div>
-            </div>
-        </div>
-    </div>
+            </section>
+
+<!-- *****************************************************************************************************************
+PROJECTS 
+***************************************************************************************************************** -->
     
-    <div class="container" id="portfolio">
-        <h1 id="page-title">Selected works</h1>
-        <div class="row">
-            <div class="col-5 offset-1">
-                <a href="socialaza.html">
-                    <div class="card">
-                        <img src="assets/img/socialaza.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h2 class="card-title centered">Socialaza</h2>
-                            <p class="card-text">A social networking application to connecting people with similar interests by leveraging existing social connections to build new friendships.</p>
-                            <p class="tags">UX Design</p>
-                            <p class="tags">Content Strategy</p>
-                        </div>
+            <section id="portfolio" class="container" >
+                <h2>Selected works</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="socialaza.html">
+                            <div class="card">
+                                <img src="assets/img/socialaza.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title centered">Socialaza</h3>
+                                    <p class="card-text">A social networking application to connect people with similar interests by leveraging existing social connections.</p>
+                                    <p class="tags">UX Design</p>
+                                    <p class="tags">Content Strategy</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="col-5">
-                <a href="sgci-plantingscience.html">
-                    <div class="card">
-                        <img src="assets/img/sgci-ps.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h2 class="card-title centered">PlantingScience</h2>
-                            <p class="card-text">Online mentoring platform for high school biology students to connect with research scientists and get mentorship to develop their scientific process.</p>
-                            <p class="tags">UX Research</p>
-                            <p class="tags">UX Design</p>
-                        </div>
+                    <div class="col-6">
+                        <a href="sgci-plantingscience.html">
+                            <div class="card">
+                                <img src="assets/img/sgci-ps.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title centered">PlantingScience</h3>
+                                    <p class="card-text">Online mentoring platform for high school biology students to network  with and get mentored by research scientists.</p>
+                                    <p class="tags">UX Research</p>
+                                    <p class="tags">UX Design</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5 offset-1">
-                <a href="travelsmart.html">
-                    <div class="card">
-                        <img src="assets/img/travel-smart.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h2 class="card-title centered">TravelSmart</h2>
-                            <p class="card-text">An IoT device that simplifies packing by reminding users to pack essential items and allowing them to locate these items through their mobile app.</p>
-                            <p class="tags">UX Design</p>
-                            <p class="tags">IoT Prototyping</p>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="travelsmart.html">
+                            <div class="card">
+                                <img src="assets/img/travel-smart.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title centered">TravelSmart</h3>
+                                    <p class="card-text">A smart packing assistant that aids users to find items from their packing list through sensors controlled by a mobile app.</p>
+                                    <p class="tags">UX Design</p>
+                                    <p class="tags">IoT Prototyping</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="col-5">
-                <a href="mobile-app.html">
-                    <div class="card">
-                        <img src="assets/img/mobile-app.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h2 class="card-title centered">Transit app</h2>
-                            <p class="card-text">A redesigned experience for the city bus service, allowing users to plan their trip, set alerts for specific routes and track their bus in real-time.</p>
-                            <p class="tags">Interaction Design</p>
-                            <!-- <p class="tags">UX Research</p> -->
-                        </div>
+                    <div class="col-6">
+                        <a href="mobile-app.html">
+                            <div class="card">
+                                <img src="assets/img/mobile-app.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title centered">Transit app</h3>
+                                    <p class="card-text">A redesigned experience for the city bus service, allowing users to plan their trip, set alerts for specific routes and track their bus in real-time.</p>
+                                    <p class="tags">Interaction Design</p>
+                                    <!-- <p class="tags">UX Research</p> -->
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-    </div>
+                </div>
+            </section>
+        </main>
 <!-- *****************************************************************************************************************
 FOOTER
 ***************************************************************************************************************** -->
-	<div class="footer">
-	 	<p><a href="index.html">Purva Sane</a><i class="fa fa-copyright"></i>2019. All rights reserved.</p>
-    </div><!--end of footer -->
+    	<footer>
+    	 	<p><a href="index.html">Purva Sane</a><i class="fa fa-copyright"></i>2019. All rights reserved.</p>
+        </footer>
 
-    <script type="text/javascript">
-        // Cache selectors
-        var lastId,
-            topMenu = $(".navbar-nav"),
-            topMenuHeight = topMenu.outerHeight()+45,
-            
-            // All list items
-            menuItems =  topMenu.find('a[href*="#"]'),
-            
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function(){
-              var item = $($(this).attr("href"));
-              if (item.length) { return item; }
-            });
-
-        // Bind click handler to menu items so we can get a fancy scroll animation
-        menuItems.click(function(e){
-          var href = $(this).attr("href"),
-              offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-          $('html, body').stop().animate({ 
-              scrollTop: offsetTop
-          }, 300);
-          e.preventDefault();
-        });
-
-        // Bind to scroll
-        $(window).scroll(function(){
-           
-           // Get container scroll position
-           var fromTop = $(this).scrollTop()+topMenuHeight;
-
-           // Get id of current scroll item
-           var cur = scrollItems.map(function(){
-             if ($(this).offset().top < fromTop)
-               return this;
-           });
-           
-           // Get the id of the current element
-           cur = cur[cur.length-1];
-           var id = cur && cur.length ? cur[0].id : "";
-           
-           // Set/remove active class
-           menuItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
-        })
-    </script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+    </body>
 </html>
 
 

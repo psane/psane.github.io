@@ -1,23 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url("hoverex-all.css") screen;
-
-/*	################################################################
-	0. COLOR SCHEME
-################################################################# 
-Color scheme:
-Navbar background: 38228C (blue);
-Navbar text: white;
-navbar tab border (top and bottom):E38B42 (orange);
-Navbar background hover: E38B42 (orange);
-
-hline: 38228C;
-
-headings level 1, 2: E38B42 (orange);
-h3: 38228C;
-
-*/
 
 /*	################################################################
 	1. GENERAL STRUCTURES
@@ -31,28 +14,7 @@ h3: 38228C;
     --secondary: rgba(133, 196, 0, 1);
 }
 
-* { 
-	margin: 0;
-	padding: 0px;
-}
 
-html {
-	scroll-behavior: smooth;
-} 
-
-body { 
-	background: #fafafa;
-	margin-top: 80px; 
-	height: 100%; 
-	color: #000;
-	font-family: 'Catamaran', sans-serif;
-	font-weight: 400;
-	}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lora', serif;
-	font-weight: 700;
-}
 
 h1, .h1 {
   font-size: 44px;
@@ -73,140 +35,16 @@ h6, .h6 {
   font-size: 16px;
 }
 
-p { 
-	padding: 0; 
-	margin-bottom: 10px; 
-	font-family: 'Catamaran', sans-serif;
-	font-weight: 400;
-	font-size: 18px; 
-	line-height: 1.4;
-	color: #000;
-	margin-top: 10px; 
-}
+
 
 img {
 	height: auto;
 	max-width: 100%;
 }
 
-a { 
-	padding: 0;
-	margin: 0;
-	text-decoration: none; 
-	color: var(--secondary);
-	/*-webkit-transition: background-color .4s linear, color .4s linear;
-	-moz-transition: background-color .4s linear, color .4s linear;
-	-o-transition: background-color .4s linear, color .4s linear;
-	-ms-transition: background-color .4s linear, color .4s linear;
-	transition: background-color .4s linear, color .4s linear;*/
-}
-
-a:hover, a:focus {
-  text-decoration: none;
- }
-
-::-moz-selection  {
-	color: #fff;
-	text-shadow:none;
-	background:#2B2E31;
-}
-::selection {
-	color: #fff;
-	text-shadow:none;
-	background:#2B2E31;
-}
-
-.centered {
-	text-align: center !important;
-}
-
-.right {
-	text-align: right !important;
-}
-
-.left {
-	text-align: left !important;
-}
-
-.row {
-	margin-top: 20px;
-}
-
 /*	################################################################
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
-.navbar {
-	width: 100%;
-	min-height: 80px;
-	padding: 0px;
-	margin-bottom: 0px;
-}
-
-.navbar-brand {
-	margin-left: 2%;
-	font-family: 'Catamaran', sans-serif;
-	font-weight: 900;
-	font-size: 40px;
-	padding: 0px;
-	display: inline;
-}
-
-#navbarResponsive {
-	margin-right: 2%;
-	margin-top: 5px;
-}
-
-.nav-link {
-	text-transform: uppercase;
-	font-weight: 800;
-	margin: 0px 5px;
-	padding: 10px 15px !important;
-	font-size: 19px;
-}
-
-.bg-dark {
-	background-color: var(--primary) !important;
-}
-
-.navbar-dark .navbar-nav >.nav-link,
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
-	color: white;
-	opacity: 0.7;
-}
-
-.navbar-dark .navbar-nav .active>.nav-link,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
-	color: white;
-	/*border-radius: 100px;*/
-	border-bottom: 3px solid white; 
-	opacity: 1;
-}
-
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover {
-	color: var(--secondary);
-	opacity: 0.9;
-}
-
-#navbarResponsive > ul > li.nav-item.active > a:focus,
-#navbarResponsive > ul > li.nav-item.active > a:hover {
-	color: white;
-	opacity: 1;
-}
-
-.jumbotron {
-	background-color: black;
-	/*height: calc(100vh - 80px);*/
-}
-
-.jumbotron-fluid {
-	padding: 0px;
-	margin-bottom: 0px;
-}
 
 #home{
 	padding: 0;
@@ -718,100 +556,6 @@ a:hover, a:focus {
 
 }
 
-h1.resume {
-	color: var(--pcolor);
-	font-weight: 900;
-	font-variant: small-caps;
-	font-size: 80px;
-	font-family: 'Catamaran', sans-serif;
-	display: inline;
-}
-
-.resume_heading {
-	color: var(--scolor);
-	font-size: 27px;
-	font-weight: 800;
-	font-variant: small-caps;
-	font-family: 'Catamaran', sans-serif;
-}
-
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	color: var(--primary);
-}
-
-.nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
-	color: var(--secondary);
-}
-
-h3.workex, h3.education, h3.projects {
-	color: black;
-	font-size: 26px;
-	font-weight: 700;
-	font-family: 'Catamaran', sans-serif;
-}
-
-h4.workex, h4.education, h4.projects {
-	color: black;
-	font-size: 26px;
-	font-weight: 500;
-	margin-top: 20px;
-	font-family: 'Catamaran', sans-serif;
-}
-
-h5.workex, h5.projects, h5.education {
-	color: black;
-	font-size: 24px;
-	font-weight: 500;
-	margin-top: 0px;
-	font-family: 'Catamaran', sans-serif;
-}
-
-h2.skills {
-	color: var(--pcolor);
-	font-size: 23px;
-	font-weight: 800;
-	font-variant: small-caps;
-	font-family: 'Catamaran', sans-serif;
-}
-
-.unstyled_list {
-	list-style-type: none;
-	font-size: 22px;
-	font-weight: 200;
-	/*margin-top: 20px;*/
-}
-
-.sublist {
-	font-weight: 200;
-	font-size: 22px;
-}
-
-p.resume {
-	font-size: 22px;
-	font-weight: 300;
-}
-
-span.resume {
-	font-weight: 400;
-}
-
-.styled_list {
-	font-size: 22px;
-	font-weight: 200;
-	margin-left: 50px;
-	margin-top: 10px;
-}
-
-.contact-listitem {
-	font-size: 22px;
-	font-weight: 200;
-	line-height: 2;
-	list-style-type: none;
-}
-
-.resume-contact {
-	margin-top:30px;
-}
 
 .inline {
 	display: inline-block;
@@ -826,9 +570,6 @@ span.resume {
 	display: none;
 }
 
-.resume-container {
-	border: 1px solid black;
-}
 
 .gd-heading {
 	color: black;
