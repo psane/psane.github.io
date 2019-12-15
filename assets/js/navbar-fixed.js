@@ -25,7 +25,7 @@ function scrollToSection(self) {
   var href = $(self).attr('href');
 
   // get the target position
-  var targetPos = $(href).offset().top - navHeight + 5;
+  var targetPos = $(href).offset().top - navHeight + 0;
 
   // scroll to target
   $('html, body').animate({

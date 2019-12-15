@@ -1,17 +1,16 @@
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url("hoverex-all.css") screen;
 
 /*	################################################################
-	1. GENERAL STRUCTURES
+	UNIVERSAL STYLES
 ################################################################# */
 :root {
     --primary: rgba(133, 20, 75, 1);
     --plight: rgba(133, 20, 75, 0.5);
     --plightest: rgba(133, 20, 75, 0.2);
-    --scolor: #BAF73C;
+    --secondary: #BAF73C;
     --slight: #f0ff73;
     --sdark: #85c400;
 }
@@ -23,68 +22,43 @@
 
 html {
 	scroll-behavior: smooth;
+	font-size: 18px;
 } 
 
-body { 
+body {
+	position: relative;
 	background: #fafafa;
-	margin-top: 80px; 
 	height: 100%; 
 	color: #000;
 	font-family: 'Catamaran', sans-serif;
 	font-weight: 400;
-	}
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lora', serif;
 	font-weight: 700;
-	/*color: var(--primary);*/
 }
-
-/*h1, .h1 {
-  font-size: 44px;
-}
-h2, .h2 {
-  font-size: 36px;
-}
-h3, .h3 {
-  font-size: 28px;
-}
-h4, .h4 {
-  font-size: 24px;
-}
-h5, .h5 {
-  font-size: 20px;
-}
-h6, .h6 {
-  font-size: 16px;
-}*/
 
 p { 
 	padding: 0; 
-	margin-bottom: 10px; 
 	font-family: 'Catamaran', sans-serif;
 	font-weight: 400;
 	font-size: 18px; 
 	line-height: 1.4;
 	color: #000;
-	margin-top: 10px; 
-}
-
-img {
-	height: auto;
-	max-width: 100%;
+	margin: 10px 0px; 
 }
 
 a { 
 	padding: 0;
 	margin: 0;
 	text-decoration: none; 
-	color: var(--scolor);
+	color: var(--secondary);
 }
 
 a:hover, a:focus {
-  text-decoration: none;
-  /*color: #000000;*/
+	text-decoration: none;
+	/*color: #000000;*/
  }
 
 ::-moz-selection  {
@@ -111,11 +85,40 @@ a:hover, a:focus {
 }
 
 .row {
-	margin-top: 20px;
+	margin-top: 0px;
+	max-width: 99vw;
+}
+
+.jumbotron {
+	/*margin-top: 120px;*/
+	background-color: #fafafa;
+}
+
+.jumbotron-fluid {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+.btn {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: white;
+	background-color: var(--primary);
+	display: inline-block;
+	border: none;
+	border-radius: 50px;
+	padding: 15px 30px;
+	white-space: normal;
+}
+
+.btn:hover, .btn:focus {
+	color: black;
+	background-color: var(--sdark);
 }
 
 /*	################################################################
-	BOOTSTRAP MODIFICATIONS & TWEAKS
+	MODAL
 ################################################################# */
 
 /* The Modal (background) */
@@ -167,7 +170,7 @@ a:hover, a:focus {
     /*color: #f1f1f1;*/
     color: #ffffff;
     font-size: 44px;
-    font-weight: 300;
+    font-weight: 400;
     transition: 0.3s;
     opacity: 0.7;
 }
@@ -180,144 +183,178 @@ a:hover, a:focus {
     opacity: 1;
 }
 
-/*####################################################
-##################Test modification###################*/
+/*	################################################################
+	NAVBAR
+################################################################# */
 
 .navbar {
 	width: 100%;
-	min-height: 80px;
-	padding: 0px;
-	margin-bottom: 0px;
+	min-height: 60px;
+	border-bottom: solid 1px #e3e3e3;
 }
 
 .navbar-brand {
-	margin-left: 2%;
+	margin-left: 2vw;
 	font-family: 'Catamaran', sans-serif;
-	font-weight: 900;
-	font-size: 40px;
+	font-weight: 800;
+	font-size: 48px;
 	padding: 0px;
 	display: inline;
+	color: var(--primary);
+}
+
+.navbar-brand img{
+	height: 50px;
+	width: auto;
+}
+
+.navbar-light .navbar-brand {
+	color: var(--primary);
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+	color: var(--primary);
 }
 
 #navbarResponsive {
-	margin-right: 2%;
+	/*margin-right: 2%;*/
+	margin-top: 5px;
+}
+#navbarResponsive1 {
+	/*margin-right: 2%;*/
 	margin-top: 5px;
 }
 
 .nav-link {
 	text-transform: uppercase;
-	font-weight: 800;
-	margin: 0px 5px;
-	padding: 10px 15px !important;
-	font-size: 19px;
-	/*padding-right: 15px !important;*/
-	/*padding-left: 15px !important;*/
+	margin: 2px;
+	padding: 8px;
+	font-size: 1rem;
 }
 
-.bg-dark {
-	background-color: var(--primary) !important;
+.bg-light {
+	background-color: #fafafa !important;
 }
 
-.navbar-dark .navbar-nav >.nav-link,
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
-	color: white;
-	opacity: 0.7;
+.navbar-light .navbar-nav >.nav-link,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+	color: var(--primary);
 }
 
-.navbar-dark .navbar-nav .active>.nav-link,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
-	color: white;
-	/*border-radius: 100px;*/
-	border-bottom: 3px solid white; 
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+	color: var(--primary);
+	font-weight: 700;
+	border-bottom: 3px solid var(--primary); 
 	opacity: 1;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover {
-	color: var(--scolor);
-	opacity: 0.9;
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: var(--primary);
+	font-weight: 700;
+	opacity: 1;
 }
 
 #navbarResponsive > ul > li.nav-item.active > a:focus,
 #navbarResponsive > ul > li.nav-item.active > a:hover {
-	color: white;
+	color: var(--primary);
+	font-weight: 700;
+	border-bottom: 3px solid var(--primary); 
 	opacity: 1;
 }
 
-.jumbotron {
-	background-color: black;
+/*	################################################################
+	PROJECT PAGE NAVBAR
+################################################################# */
+
+.back-link {
+	color: var(--primary);
+	text-transform: uppercase;
+	margin: 2px;
+	padding: 8px 9px;
+	font-size: 1rem;
 }
 
-.jumbotron-fluid {
-	padding: 0px;
-	margin-bottom: 0px;
+.back-link:hover, .back-link:focus {
+	font-size: 1rem;
+	color: var(--primary);
+	font-weight: 700;
+	opacity: 1;
 }
 
-#bg-image {
-	background-image: url('../../cover-photo2.jpg');
-	background-size: cover;
-	height: calc(100vh - 80px);
-	/*height: 100vh;*/
-	width: auto;
+#back-img {
+	height: 1rem;
+	margin-bottom: 5px;
 }
 
-#herotext {
-	position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate( -50%, -50% );
+/*	################################################################
+	HOMEPAGE
+################################################################# */
+#home {
+	height: 100vh;
+	padding-top:91px;
+}
+
+#profile-photo{
+	max-width: 100%;
 }
 
 #herotext h1{
-  font-size: 5rem;
-  color: white;
+	margin-top: 120px;
+	font-size: 4rem;
+	color: black;
 }
 
 #herotext h2{
-  font-size: 2rem;
-  color: white;
+	margin-top: 20px;
+	font-size: 1.5rem;
+	color: #757575;
+	margin-bottom: 15px;
 }
 
-.btn {
-	margin: 20px;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 1.4;
-	color: white;
-	background-color: var(--primary);
-	display: inline-block;
-	border: none;
-	/*border-radius: 20px;*/
-	padding: 15px 30px;
-	white-space: normal;
+#emoji{
+	height: 1.5rem;
+	width: auto;
+	margin-bottom: 7px;
 }
 
-.btn:hover, .btn:focus {
-	color: black;
-	background-color: var(--sdark);
-	/*border-radius: 50px;*/
+#home-buttons a{
+	margin-top: 30px;
+	margin-right: 15px;
 }
 
-#buttons {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+#social-buttons {
+	margin-top: 20px;
 }
 
-#page-title {
+#social-buttons img{
+	width: auto;
+	height: 48px;
+	margin-right: 10px;
+}
+
+#portfolio {
+	height: auto;
+}
+
+#portfolio h2{
     padding: 5px 0px;
-    position: static;
-    top: calc(100vh + 80px);
-    margin: 80px 0px 50px 0px;
-    font-size: 44px;
+    position: relative;
+    top: 0;
+    padding: 80px 0px 50px 0px;
+    font-size: 3rem;
 }
 
 .card {
     overflow: hidden;
+	margin-top: 20px;
+    box-shadow: 7px 7px 10px #e3e3e3;
 }
 
 .card-img-top {
@@ -327,30 +364,40 @@ a:hover, a:focus {
 }
 
 .card:hover .card-img-top{
-	-webkit-transform: scale(1.08);
-	transform: scale(1.08);
-	transform-origin: center bottom;
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
 }
 
-.card-body {
-	border: 1.1px solid #b3b3b3;}
-
 .card-title {
-	font-size: 34px;
+	font-size: 2rem;
 	color: black;
 }
 
 .card-text {
-	font-size: 18px;
+	font-size: 1.1rem;
 }
 
 .tags {
-	border-radius: 5px;
-	border: solid 2px var(--plight);
-	color: black;
-	background-color: #f5f5f5;
+	border-radius: 60px 10px 60px 60px;
+	border: none;
+	color: white;
+	background-color: var(--primary);
 	display: inline-block;
-	padding: 3px 12px;
+	padding: 5px 10px 5px 10px;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: left;
+	margin-right: 10px;
+}
+
+/*	################################################################
+	PROJECT PAGE
+################################################################# */
+
+.projectheader h1 {
+	text-align: center;
+	/*padding: 5px 0px;*/
+	margin: 90px 0px 0px 0px;
 }
 
 .sidebar {
@@ -381,7 +428,33 @@ a:hover, a:focus {
 	color: white;
 }
 
-.footer {
+.projectimage-nohover {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.projectimage {
+    text-align: center;
+    cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;
+    transition: 0.3s;
+}
+
+.projectimage:hover {
+	opacity: 0.8;
+}
+
+.projectimage img{
+	width: 98%;
+	height: auto;
+	/*max-height: 80vh;*/
+}
+
+/*	################################################################
+	FOOTER
+################################################################# */
+footer {
 	height: 60px;
 	width: 100%;
 	margin: 0px;
@@ -391,76 +464,103 @@ a:hover, a:focus {
 	position: relative;
 	bottom: 0;
 	left: 0;
+	/*padding-bottom: 30px;*/
 }
 
-.footer p, .footer a, .footer i {
+footer p, footer a, footer i {
+	position:absolute
+	top: 50%;
 	color: black;
-	font-weight: 600;
-	font-size: 16px;
+	font-size: 1rem;
 	text-align: center;
-	
+	margin: 3px 0px;
+
 }
 
-.footer a:hover, .footer a:focus {
+footer a:hover, footer a:focus {
 	text-decoration: underline;
 }
 
-.footer i {
-	font-weight: 400;
+footer i {
+	font-weight: 100;
 	padding: 0px 3px;
 }
+
+
 /************************************** media queries***************************************************************************/
 @media screen and (max-width: 1200px) {
-	#herotext h1 {
-		font-size: 60px;
-	}
-
-	#herotext h2{
-		font-size: 24px;
-	}
+	
 
 }
 
 @media screen and (max-width: 992px) {
-	#bg-image {
-		background: none;
+	.navbar {
+		width: 100%;
+		min-height: 30px;
+		padding: 20px 0px;
 	}
 
-	#herotext {
+	.navbar-toggler {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	#herotext h1, #herotext h2{
-		color: black;
-	}
-	#herotext h1 {
-		font-size: 50px;
+		top: 20px;
+		right: 20px;
 	}
 
-	#herotext h2{
-		font-size: 20px;
+	.nav-link {
+		margin-left: 10px;
+		padding-left: 15px;
+		border-bottom: none;
+	}
+
+	.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+		border-bottom: none;
+		text-decoration: underline;
+		text-underline-position: under;
+	}
+	#navbarResponsive > ul > li.nav-item.active > a:focus, #navbarResponsive > ul > li.nav-item.active > a:hover {
+		border-bottom: none;
+		text-decoration: underline;
+		text-underline-position: under;
+	}
+
+
+	#profile-photo {
+		display: none;
+	}
+
+	#herotext h1 {
+		margin-top: 40px;
+		font-size: 3rem;
+	}
+
+	#herotext h2 {
+		font-size: 1.2rem;
+	}
+
+	#emoji {
+		height: 1.2rem;
+	}
+
+	#home {
+		padding: 0px 15px;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	#herotext h1 {
-		font-size: 40px;
-	}
-
-	#herotext h2{
-		font-size: 18px;
-	}
+	
 
 }
 
 @media screen and (max-width: 426px) {
 	#herotext h1 {
-		font-size: 30px;
+		font-size: 2.5rem;
 	}
 
-	#herotext h2{
-		font-size: 16px;
+	#herotext h2 {
+		font-size: 1rem;
+	}
+
+	#emoji {
+		height: 1.2rem;
 	}
 }
