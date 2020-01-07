@@ -486,6 +486,41 @@ footer i {
 	padding: 0px 3px;
 }
 
+/*	################################################################
+	ABOUT
+################################################################# */
+#about-header {
+	background-image: url(../../assets/img/165.png);
+    margin-top: 91px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-header h1{
+	color: white;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 50px;
+}
+
+#about-body {
+	margin-top: 20px;
+}
+
+#about-body p{
+    font-size: 1.15rem;
+}
+
+#map svg {
+	width: 100%;
+	height: auto;
+}
+
+.map-label {
+	font-weight: 900;
+	font-size: 12px;
+}
 
 /************************************** media queries***************************************************************************/
 @media screen and (max-width: 1200px) {
