@@ -1,18 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+/* body*/ @import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
+/*headline*/ @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url("hoverex-all.css") screen;
 
 /*	################################################################
 	UNIVERSAL STYLES
 ################################################################# */
 :root {
+	/*Color palette*/
     --primary: rgba(133, 20, 75, 1);
-    --plight: rgba(133, 20, 75, 0.5);
-    --plightest: rgba(133, 20, 75, 0.2);
-    --secondary: #BAF73C;
+    /*--secondary: #BAF73C;
     --slight: #f0ff73;
-    --sdark: #85c400;
+    --sdark: #85c400;*/
+    --greydark: #202020 ;
+    --socialaza-green: #34BB66;
 }
 
 * { 
@@ -21,17 +22,18 @@
 }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth !important;
 	font-size: 18px;
 } 
 
 body {
 	position: relative;
-	background: #fafafa;
+	background: #ffffff;
 	height: 100%; 
-	color: #000;
+	color: #202020;
 	font-family: 'Catamaran', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
+	line-height: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,26 +41,53 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 1.8rem
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
 p { 
 	padding: 0; 
 	font-family: 'Catamaran', sans-serif;
-	font-weight: 400;
-	font-size: 18px; 
-	line-height: 1.4;
-	color: #000;
+	line-height: 1.3;
+	color: #202020;
 	margin: 10px 0px; 
+}
+
+ul {
+	line-height: 1.3;
+	list-style-position: outside;
+	/*margin-left: 20px;*/
 }
 
 a { 
 	padding: 0;
 	margin: 0;
 	text-decoration: none; 
-	color: var(--secondary);
+	color: var(--primary);
 }
 
 a:hover, a:focus {
 	text-decoration: none;
-	/*color: #000000;*/
  }
 
 ::-moz-selection  {
@@ -90,8 +119,7 @@ a:hover, a:focus {
 }
 
 .jumbotron {
-	/*margin-top: 120px;*/
-	background-color: #fafafa;
+	background-color: #ffffff;
 }
 
 .jumbotron-fluid {
@@ -127,9 +155,9 @@ a:hover, a:focus {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 80px; /* Location of the box */
-    left: 0;
+    left: 15%;
     top: 0;
-    width: 100%; /* Full width */
+    width: 85%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -139,9 +167,10 @@ a:hover, a:focus {
 /* Modal Content (image) */
 .modal-content {
     margin: auto;
+    margin-top: 35px;
     display: block;
-    max-width: 87vw;
-	max-height: 87vh;
+    max-width: 80vw;
+	max-height: 80vh;
 }
 
 /* Add Animation */
@@ -167,24 +196,22 @@ a:hover, a:focus {
     position: absolute;
     top: 70px;
     right: 35px;
-    /*color: #f1f1f1;*/
     color: #ffffff;
-    font-size: 44px;
+    font-size: 2rem;
     font-weight: 400;
     transition: 0.3s;
-    opacity: 0.7;
+    opacity: 1;
 }
 
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+    color: #ffffff;
+    font-size: 2.3rem;
+    font-weight: 400;
     opacity: 1;
 }
 
 /*	################################################################
-	NAVBAR
+	TOP NAVBAR
 ################################################################# */
 
 .navbar {
@@ -218,13 +245,21 @@ a:hover, a:focus {
 }
 
 #navbarResponsive {
-	/*margin-right: 2%;*/
 	margin-top: 5px;
 }
-#navbarResponsive1 {
-	/*margin-right: 2%;*/
-	margin-top: 5px;
+
+.main-navbar-toggler {
+	position: absolute;
+	right: 20px;
+	/*border: solid 3px var(--primary) !important;*/
+	background-color: var(--primary) !important;
 }
+
+.main-navbar-toggler .fa-bars {
+	color: var(--white);
+}
+
+
 
 .nav-link {
 	text-transform: uppercase;
@@ -234,7 +269,7 @@ a:hover, a:focus {
 }
 
 .bg-light {
-	background-color: #fafafa !important;
+	background-color: #ffffff !important;
 }
 
 .navbar-light .navbar-nav >.nav-link,
@@ -270,7 +305,7 @@ a:hover, a:focus {
 }
 
 /*	################################################################
-	PROJECT PAGE NAVBAR
+	PROJECT PAGE TOP NAVBAR
 ################################################################# */
 
 .back-link {
@@ -293,6 +328,7 @@ a:hover, a:focus {
 	margin-bottom: 5px;
 }
 
+
 /*	################################################################
 	HOMEPAGE
 ################################################################# */
@@ -308,13 +344,12 @@ a:hover, a:focus {
 #herotext h1{
 	margin-top: 120px;
 	font-size: 4rem;
-	color: black;
 }
 
 #herotext h2{
 	margin-top: 20px;
 	font-size: 1.5rem;
-	color: #757575;
+	color: #202020;
 	margin-bottom: 15px;
 }
 
@@ -341,13 +376,14 @@ a:hover, a:focus {
 
 #portfolio {
 	height: auto;
+	margin-bottom: 50px;
 }
 
 #portfolio h2{
     padding: 5px 0px;
     position: relative;
     top: 0;
-    padding: 80px 0px 50px 0px;
+    padding: 80px 0px 20px 0px;
     font-size: 3rem;
 }
 
@@ -391,41 +427,194 @@ a:hover, a:focus {
 }
 
 /*	################################################################
-	PROJECT PAGE
+	PROJECT PAGE HEADER
 ################################################################# */
 
-.projectheader h1 {
+.project-header {
+	width: 100%;
+	height: 100%;
+}
+
+#socialaza-header {
+	background-color: var(--socialaza-green);
+}
+
+#fedex-header {
+	background-color: #4d148c;
+	height: 65vh;
+}
+
+.project-header-content {
+	width: 40%;
+	margin: 70px 0px 0px 0px;
+	padding: 2% 8% 2% 4%;
+	position: absolute;
+	top: 50px;
+	left: 7%;
+	background-color: #ffffff;
+	color: black;
+	display: inline-block;
+}
+
+.project-header-content p{
+	margin-top: 30px;
+	font-size: 1.2rem;
+}
+
+.project-header-image {
+	width: 100%;
+	/*height: 90vh;*/
+	margin: 70px 0px 0px 0px;
+	display: inline-block;
+}
+
+/*	################################################################
+	PROJECT PAGE NAVIGATION
+################################################################# */
+
+.sticky-top {
+  position: sticky;
+  top: 65px;
+  width: 100%;
+}
+
+.bg-dark {
+	background-color: #ffffff !important;
+	border: none;
+	border-right: solid 1px #e3e3e3;
+}
+
+#side-nav {
+	/*max-width: 15%;*/
+	height: 100vh;
+	background-color: black;
+}
+
+#myNavbar2 {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	position: relative;
+	align-self: flex-start;
+}
+
+#navbarResponsive2 {
+	position: absolute;
+	top: 10px;
+}
+
+.project-navbar-toggler {
+	/*background: var(--socialaza-green) !important;*/
+	border: solid 1px var(--socialaza-green) !important;
+	padding: .2rem .6rem;
+	font-size: 0.9rem;
+	line-height: 0;
+}
+
+.project-navbar-toggler .fa-bars {
+	color: var(--socialaza-green);
+}
+
+.nav-item2 a{
+	/*width: auto;*/
+    display: block;
+    padding: 12px 0px;
+    color: var(--socialaza-green);
+    text-transform: capitalize;
+	padding: 10px 0px;
+	margin: 10px 0px 0px 0px;
+	font-size: 0.9rem;
+}
+
+.nav-item2 a:focus, .nav-item2 a:hover {
+	color: var(--socialaza-green);
+	font-weight: 700;
+	opacity: 1;
+}
+
+.nav-item2 a.active {
+	color: var(--socialaza-green);
+	font-weight: 600;
+	border-bottom: 3px solid var(--socialaza-green); 
+	opacity: 1;
+}
+
+.sub-nav-item {
+	font-size: 0.8rem;
+	margin-top: 0px;
+	list-style-type: none !important;
+}
+
+.sub-nav-item a{
+	color: var(--socialaza-green);
+	margin-top: 0px;
+	padding: 5px;
+}
+
+/*	################################################################
+	PROJECT PAGE BODY
+################################################################# */
+
+.project-body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.project-content {
+	position: relative;
+	height: auto;
+	overflow-y: auto;
+	width: 95%;
+	margin-left: 2.5%;
+
+}
+
+.project-content section{
+	margin-left: 20px;
+	/*margin-bottom: 50px;*/
+}
+
+.project-content section:last-child{
+	margin-left: 20px;
+	margin-bottom: 50px;
+}
+
+.project-content section h2{
+	margin-top: 70px;
+	margin-bottom: 20px;
 	text-align: center;
-	/*padding: 5px 0px;*/
-	margin: 90px 0px 0px 0px;
 }
 
-.sidebar {
-    padding-top: 20px;
-    height: 100%;
-    width: 15%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #757575;
-    /*background-opacity: 0.5;*/
+.project-content section h3{
+	margin-top: 25px;
 }
 
-.sidebar-nav {
+.about-subtitle {
 	list-style-type: none;
-	margin-top: 100px;
-    margin-left: 10px;
+	line-height: 2;
 }
 
-.sidebar-item {
-	margin: 15px 10px;
+.strong {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-right: 25px;
+	width: 90px;
 }
 
-.sidebar-link {
-	text-decoration: none;
-	font-size: 17px;
-	color: white;
+.indented-bullets {
+	margin-left: 2rem;
+}
+
+.socialaza {
+	color: var(--socialaza-green)
+}
+
+.light {
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 300;
+	margin: 5px 0px 25px 0px;
 }
 
 .projectimage-nohover {
@@ -458,9 +647,10 @@ footer {
 	height: 60px;
 	width: 100%;
 	margin: 0px;
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	padding: 15px 0px;
-	background-color: #e0e0e0;
+	/*background-color: #fafafa;*/
+	border-top: solid 1px #e3e3e3;
 	position: relative;
 	bottom: 0;
 	left: 0;
@@ -518,27 +708,44 @@ footer i {
 }
 
 .map-label {
-	font-weight: 900;
+	font-weight: 700;
 	font-size: 12px;
 }
 
 /************************************** media queries***************************************************************************/
-@media screen and (max-width: 1200px) {
-	
+@media screen and (max-width: 1200px) {	
 
 }
 
 @media screen and (max-width: 992px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	h2 {
+		font-size: 1.8rem
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+	}
+
+	h5 {
+		font-size: 1.1rem;
+	}
+
+	h6 {
+		font-size: 1rem;
+	}
+
 	.navbar {
 		width: 100%;
 		min-height: 30px;
-		padding: 20px 0px;
-	}
-
-	.navbar-toggler {
-		position: absolute;
-		top: 20px;
-		right: 20px;
+		padding: 10px 0px;
 	}
 
 	.nav-link {
@@ -547,29 +754,23 @@ footer i {
 		border-bottom: none;
 	}
 
-	.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+	.navbar-light .navbar-nav .active>.nav-link,
+	.navbar-light .navbar-nav .nav-link.active,
+	.navbar-light .navbar-nav .nav-link.show,
+	.navbar-light .navbar-nav .show>.nav-link {
 		border-bottom: none;
 		text-decoration: underline;
 		text-underline-position: under;
 	}
-	#navbarResponsive > ul > li.nav-item.active > a:focus, #navbarResponsive > ul > li.nav-item.active > a:hover {
+	#navbarResponsive > ul > li.nav-item.active > a:focus,
+	#navbarResponsive > ul > li.nav-item.active > a:hover {
 		border-bottom: none;
 		text-decoration: underline;
 		text-underline-position: under;
-	}
-
-
-	#profile-photo {
-		display: none;
 	}
 
 	#herotext h1 {
-		margin-top: 40px;
-		font-size: 3rem;
-	}
-
-	#herotext h2 {
-		font-size: 1.2rem;
+		margin-top: 100px;
 	}
 
 	#emoji {
@@ -579,23 +780,76 @@ footer i {
 	#home {
 		padding: 0px 15px;
 	}
+
+	.project-navbar-toggler {
+		position: absolute;
+		top: 20px;
+		left: 15%;
+	}
+
+	.project-header-content {
+		width: 37.5%;
+	}
+
+	.project-header-content p{
+		margin-top: 30px;
+		font-size: 1.1rem;
+	}
 }
 
 @media screen and (max-width: 768px) {
-	
+	.desktop-tablet {
+		display: none;
+	}
+
+	#navbarResponsive2 {
+		top: 50px;
+		max-width: 90%;
+	}
+
+	#myNavbar2 {
+		margin-top: 15px;
+	}
+
+	.project-header {
+		height: auto;
+	}
+
+	#socialaza-header {
+		background-color: white;
+	}
+
+	#fedex-header {
+		background-color: white;
+	}
+
+	.project-header-content {
+		width: 100%;
+		border-bottom: solid 1px #e3e3e3;
+		background-color: white;
+		position: static;
+	}
+
+	.project-header-content p{
+		margin-top: 30px;
+		font-size: 1.1rem;
+	}
+
+	.project-content section h2 {
+		padding-top: 20px;
+	}
+
+	.nav-item2 a{
+	font-size: 0.7rem;
+	/*word-break: break-all;*/
+	}
 
 }
 
-@media screen and (max-width: 426px) {
-	#herotext h1 {
-		font-size: 2.5rem;
+@media screen and (max-width: 576px) {
+	.mobile-view {
+		display: none !important;
 	}
 
-	#herotext h2 {
-		font-size: 1rem;
-	}
 
-	#emoji {
-		height: 1.2rem;
-	}
 }
