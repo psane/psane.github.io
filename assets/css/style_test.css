@@ -440,8 +440,8 @@ a:hover, a:focus {
 }
 
 #fedex-header {
-	background-color: #4d148c;
-	height: 65vh;
+	background-color: #ECE2D0;
+	/*height: 65vh;*/
 }
 
 .project-header-content {

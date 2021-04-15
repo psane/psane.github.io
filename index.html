@@ -32,26 +32,23 @@
     </head>
 
     <body data-spy="scroll" data-target="#myNavbar" data-offset="50">
-    <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
                 <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler main-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto" id="myNavbar">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
+                            <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#portfolio">Projects</a>
                         </li>
-                        <li class="nav-item">
-                            <!-- <a class="nav-link" href="about.html">About</a> -->
-                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -68,7 +65,7 @@ ABOUT
             <section id="home" class="jumbotron jumbotron-fluid" >
                 <div class="row" >
                     <div class="col-lg-4">
-                        <img id="profile-photo" src="assets/img/profilephoto.jpg">
+                        <img id="profile-photo" class="web-only" src="assets/img/profilephoto.jpg">
                     </div>
                     <div class="col-lg-8 col-md-12" id="herotext">
                         <h1>Purva Sane</h1>
@@ -92,20 +89,47 @@ PROJECTS
             <section id="portfolio" class="container" >
                 <h2>Selected works</h2>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-xs-12">
+                        <a href="accessibility-evangelism.html">
+                            <div class="card">
+                                <img src="assets/img/accessibility-card2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title centered">Accessibility Evangelism</h3>
+                                    <p class="card-text">Building a culture of accessibility and inclusion through empathy and knowledge sharing.</p>
+                                    <p class="tags">UX Design</p>
+                                    <p class="tags">Accessibility</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div><div class="col-lg-6 col-xs-12">
                         <a href="socialaza.html">
                             <div class="card">
-                                <img src="assets/img/socialaza.jpg" class="card-img-top" alt="...">
+                                <img src="assets/img/socialaza-card.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h3 class="card-title centered">Socialaza</h3>
-                                    <p class="card-text">A social networking application to connect people with similar interests by leveraging existing social connections.</p>
+                                    <p class="card-text">A social networking app that connects people to their second and third degree network connections and facilitates shared experiences.</p>
                                     <p class="tags">UX Design</p>
                                     <p class="tags">Content Strategy</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-6">
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <a href="travelsmart.html">
+                            <div class="card">
+                                <img src="assets/img/travel-smart.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title centered">TravelSmart</h3>
+                                    <p class="card-text">A smart packing assistant that aids users to find items from their packing list through sensors controlled by a mobile app.</p>
+                                    <p class="tags">UX Design</p>
+                                    <p class="tags">IoT Prototyping</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-xs-12">
                         <a href="sgci-plantingscience.html">
                             <div class="card">
                                 <img src="assets/img/sgci-ps.jpg" class="card-img-top" alt="...">
@@ -119,41 +143,13 @@ PROJECTS
                         </a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="travelsmart.html">
-                            <div class="card">
-                                <img src="assets/img/travel-smart.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h3 class="card-title centered">TravelSmart</h3>
-                                    <p class="card-text">A smart packing assistant that aids users to find items from their packing list through sensors controlled by a mobile app.</p>
-                                    <p class="tags">UX Design</p>
-                                    <p class="tags">IoT Prototyping</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <a href="mobile-app.html">
-                            <div class="card">
-                                <img src="assets/img/mobile-app.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h3 class="card-title centered">Transit app</h3>
-                                    <p class="card-text">A redesigned experience for the city bus service, allowing users to plan their trip, set alerts for specific routes and track their bus in real-time.</p>
-                                    <p class="tags">Interaction Design</p>
-                                    <!-- <p class="tags">UX Research</p> -->
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </section>
         </main>
 <!-- *****************************************************************************************************************
 FOOTER
 ***************************************************************************************************************** -->
     	<footer>
-    	 	<p><a href="index.html">Purva Sane</a><i class="fa fa-copyright"></i>2019. All rights reserved.</p>
+            <p><a href="index.html">Designed and implemented by Purva Sane</a><i class="fa fa-copyright"></i>2016 - 2021</p>
         </footer>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
