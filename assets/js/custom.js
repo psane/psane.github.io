@@ -13,15 +13,20 @@
         modal.style.display = 'block';
         var modalImg = document.getElementById("img01");
         var clicked_src='assets/img/'+filesrc
-        // window.alert(clicked_src)
         modalImg.src = clicked_src;
     }
 
     function closeModal() {
         modal.style.display = "none";
     }
+    
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+
+    function playGif(gif_img) {
+        gif_img.src = gif_img.src.substring(0, gif_img.src.length - 3) + "gif";
+        setTimeout(function(){ gif_img.src=gif_img.src.substring(0, gif_img.src.length - 3) + "jpg"; }, 5000);
     }
