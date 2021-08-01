@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="assets/favicon/favicon.ico">
+		<link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
 
 		<title>Purva Sane UX Portfolio - Socialaza</title>
 
@@ -28,40 +28,21 @@
 		<!-- Custom files -->
 		<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 		<link rel="stylesheet" href="assets/css/style_test.css">
-		<script>
-			window.addEventListener('DOMContentLoaded', () => {
-					const observer = new IntersectionObserver(entries => {
-						entries.forEach(entry => {
-							const id = entry.target.getAttribute('id');
-							if (entry.intersectionRatio > 0) {
-								document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
-							} else {
-								document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
-							}
-						})
-					});
-
-					// Track all sections that have an `id` applied
-					document.querySelectorAll('section[id]').forEach((section) => {
-						observer.observe(section);
-					});
-				});
-		</script>
-
+		<script type="text/javascript" src="assets/js/custom.js"></script>
 	</head>
 
 	<body>
 	  	<header>
 	  		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
 	            <a class="back-link" href="index.html#portfolio"><img id="back-img" src="assets/img/back.svg"> Back to Projects</a>
-	            <button class="navbar-toggler main-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-	                <i class="fas fa-bars"></i>
+	            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	                <span class="navbar-toggler-icon"></span>
 	            </button>
 	            <div class="collapse navbar-collapse" id="navbarResponsive">
 	                <ul class="navbar-nav ml-auto">
-	                    <!-- <li class="nav-item">
+	                    <li class="nav-item">
 	                        <a class="nav-link" href="about.html">About</a>
-	                    </li> -->
+	                    </li>
 	                    <li class="nav-item">
 	                        <a class="nav-link" id="resume" href="assets/files/PurvaSane_Resume.pdf" target="_blank">Resume</a>
 	                    </li>
@@ -73,282 +54,200 @@
 <!-- *****************************************************************************************************************
 CONTENT
 ***************************************************************************************************************** -->
-	    <main role="main">
-			<div id="myModal" class="modal">
-		  		<span class="close" role="button" tabindex=0 onclick="closeModal()">&times;</span>
-		  		<img class="modal-content" id="img01">
-			</div>
+    <main role="main" class="container">
+		<div id="myModal" class="modal">
+	  		<span class="close" onclick="closeModal()">&times;</span>
+	  		<img class="modal-content" id="img01">
+		</div>
 
-			<div class="project-header" id="socialaza-header">
-				<img class="project-header-image mobile-view" src="assets/img/socialaza_jumbotron.png">
-				<div class="project-header-content">
-					<h1>Socialaza</h1>
-					<p>An app that connects you to your second and third-degree social network connections and facilitates shared experiences.</p>
-				</div> 
-			</div>
+		<div class="container projectheader">
+	        <h1>Socialaza</h1>
 
-			<div class="project-body">
-				<div class="col-xl-2 col-lg-3 col-md-3 mobile-view">
-					<nav class="navbar navbar-expand-lg navbar-light bg-dark" role="navigation" id="side-nav">
-						<!-- <button class="navbar-toggler project-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive2" aria-controls="navbarResponsive2" aria-expanded="false" aria-label="Toggle navigation">
-		                	<i class="fas fa-bars"></i>
-		                </button> -->
-		            	<div id="navbarResponsive2">
-							<ul class="navbar-nav ml-auto" id="myNavbar2">
-								<li class="nav-item2">
-									<a class="" href="#about">About this project</a>
-								</li>
-								<li class="nav-item2">
-									<a class="" href="#research">User research</a>
-									<!-- <ul class="sub-nav-item">
-										<li><a href="#research">Survey</a></li>
-										<li><a href="#">User interviews</a></li>
-									</ul> -->
-								</li>
-								<li class="nav-item2">
-									<a class="" href="#design">Design iterations</a>
-								</li>
-								<li class="nav-item2">
-									<a class="" href="#prototype">High-fidelity prototype</a>
-								</li>
-								<li class="nav-item2">
-									<a class="" href="#learnings">Lessons learned</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
+		 	<div class="row">
+			 	<div class="col-lg-6 col-md-12">
+			 		<div class="projectcontent">
+			 			<h2>Problem Statement</h2>
+			 			<br><p>How might we enable people to find social companions for activities and events of their interest?</p>
+			 			<h2>Problem Description</h2>
+			 			<br><p>Humans are social animals, but not everyone has the same preferences when it comes to certain activities and events. Sometimes, you want to go see a movie which none of your friends want to see. You want to try that new vegan restaurant but your friends aren't into vegan food. With this in mind, we wanted to create an app that makes it easier for people to find companions for activities based on common interests. </p>
+			 		</div>
+			 	</div>
+			 	<div class="col-lg-5 offset-lg-1 col-md-12">
+			 		<div class="projectcontent">
+				 		<h2>Project Details</h2>
+			 			<br><p><b>Duration:</b> 
+				 		<br>September 2017 - December 2017</p>
+				 		<p><b>Role:</b>
+				 		<br>UX Designer, Front-End Developer</p>
+				 		<h2>Key Takeaways</h2>
+				 		<br><ul>
+				 			<li>Social computing systems need to take into account issues with privacy, user security, anonymity and accountability which can have serious implications for the design of the product.</li>
+				 			<li>Time is a crucial resources while shipping an end-to-end product. An MVP with limited features is better than no product at all.</li>
+				 		</ul>
+			 		</div>
+			 	</div>
+			 	<div class="col-12">
+				 	<div class="projectcontent">
+					 	<h2>Proposed Solution</h2>
+					 	<p>Socialaza is a social app which helps people to find activities and events posted by people in the area. We use Facebook credentials to authenticate users to the app and users only see activities posted by their second and third degree Facebook connections.</p>
+					 	<div class="col-12 centered">
+					 		<!-- <iframe width="411" height="731" src="https://xd.adobe.com/embed/e0370a63-1734-4754-49f3-6bcf57ab9d99-9606/?fullscreen" frameborder="0" allowfullscreen></iframe> -->
+					 	</div>
+					</div>
 				</div>
-
-				<div class="col-xl-10 col-lg-9 col-md-9 col-sm-12">
-					<div class="project-content">
-						<section id="about">
-				 			<h2>About this project</h2>
-				 			<ul class="about-subtitle">
-				 				<li><div class="strong socialaza">Timeline</div>September - December 2017</li>
-				 				<li><div class="strong socialaza">My team</div>2 UX Designers and 1 Visual Designer</li>
-				 				<li><div class="strong socialaza">My role</div>UX Designer</li>
-				 				<li><div class="strong socialaza">Type</div>Academic project</li>
-				 			</ul>
-					 		<p>Socialaza is a social networking app helping users find and participate in events posted by other users in the app. Users can sign up for events happening nearby based on their interests. The app uses Facebook credentials to authenticate users. Users see recommended events posted by their second and third-degree Facebook connections.</p>
-				 			<h3>Defining the problem</h3>
-				 			<p>For this academic project, we had been provided the following brief: “Develop a system/solution that focuses on enabling positive social interactions  in the digital or physical (or both) space.”</p>
-				 			<p>During ideation, we considered and discarded several ideas, like co-parenting, social gaming/entertainment, and remote shopping. One theme that resonated with the whole team was “travel and shared experiences”. We started telling each other about our travel stories and past experiences, both positive and negative. In all the stories, what stood out was the desire to visit new places “like a local” and how that can elevate a travel experience from ordinary to memorable. We also talked about how our travel itineraries often can be restricted by our travel companions’ interests and how we may not always get to do or see everything we want on a trip. </p>
-				 			<p>Thinking we were onto something, we polled our classmates to get first impressions on our idea. We received positive feedback about this idea from our classmates. The discussion with the larger group also led us to include day-to-day activities like going to a football game or trying a new restaurant. We decided to frame our design problem using the following “How-Might-We” question</p>
-				 			<h4 class="light socialaza centered">How might we enable people to find social companions for activities and events of their interest?</h4>
-				 	
-					 		
-					 		
-					 	</section>
-					 	<section id="research">
-						 	<h2>User research </h2>
-						 	<p>Our UX research spanned across 3 weeks and included various research methodologies, both qualitative and quantitative.</p>
-						 	<h3>Market research</h3>
-						 	<p>We conducted market research to find similar applications that exist in this space. Of the thirteen applications we reviewed, most were in the travel domain, offering local tour guides for tourists. A few applications existed in the movies/workout domains, but they did not seem very popular or robust.</p>
-						 	<h3>Survey</h3>
-						 	<p>Next, we wanted to understand what types of activities people would be comfortable taking part in with strangers as companions. We decided to gather some quantitative data on people’s attitudes and interests about various types of activities related to travel and daily tasks. We also gathered demographic data in our survey to capture any demographic factors that affected people’s attitudes about participating in activities with strangers. We ran the survey for a week and received 134 valid responses. Based on the survey data, we learned that <span class="bold">users were not comfortable participating in activities like shopping, going to bars, and getting groceries with strangers</span>.</p>
-						 	<br><p>Other insights from the survey included: </p>
-					 		<ul class="indented-bullets">
+				<div class="col-12">
+					<div class="projectcontent">
+					 	<h2>Process</h2>
+					 	<h3>Competitive research</h3>
+					 	<p>We conducted secondary research to find similar applications that exist in this space. Of the 13 applications we examined, most were in the travel domain, offering local tour guides for tourists. A few applications existed in the movies/workout domains, but they lacked several important features which make a good social app.</p>
+					 	<h3>Survey and User Interviews</h3>
+					 	<p>The aim of the survey was to understand attitudes towards going for certain activities with people they don't know. We asked people several questions about their willingness to go for certain activities with unknown persons.
+					 		<h4>SURVEY INSIGHTS</h4>
+					 		<ul>
 					 			<li>People are comfortable with unknown persons showing them around the city.</li>
 					 			<li>The average willingness for most activities was around 3 on a 5 point scale, but certain activities like shopping and workouts stood out as many participants were hesitant to do these with strangers.</li>
 					 			<li>Activities involving lesser social interaction between companions were preferred over the others</li>
 					 		</ul>
-					 		<h3>In-depth interviews</h3>
-						 	<p>To gain some qualitative insights into our survey findings, we conducted in-depth interviews with 6 participants over 10 days. The primary goal of the interviews was to understand why certain activities had a higher willingness rating than others in the survey. We also wanted to know if users had any concerns about feeling safe with or trusting strangers with whom they would participate in activities. If this were the case, we wanted to learn how we could help alleviate some of those concerns with our design.</p>
-						 	<br><p> What we learned from the interviews:</p>
-							<ul class="indented-bullets">
-								<li>Since activities like shopping and getting groceries may be largely influenced by personal preferences & dietary restrictions, participants were uncomfortable with strangers being involved in these activities. Most participants stated that they only go shopping with people who they know very well and whose opinions they trust.</li>
-								<li>Participants were comfortable with the idea of being shown around a new city by a stranger but were also concerned about the person's credentials.
-									<ul class="indented-bullets">
-										<li>4 of 6 participants mentioned that they would visit the profile page of their co-participant(s) to look at previous ratings, reviews, and try to gather any other information that would help them feel more comfortable meeting up with that person.</li>
-										<li>2 of 6 participants mentioned that they would not pick a tour guide unless they were able to make sure that the person was a "true" local and had experience with tours. </li>
-									</ul>
-								<li>Credentials are important for adventure sports as well. 4 of 6 participants mentioned that they would feel safer participating in an adventure sport led by someone who had already done the activity a few times.</li>
-								<li>Participants were moderately comfortable with going to new restaurants with people they didn't know well but had concerns around the compatibility of food preferences and dietary restrictions. 3 of 6 participants were also wary of the experience feeling "date-like" and leading to potential awkwardness.</li>
-							</ul>
-							<h3>Research synthesis</h3>
-							<p>To make sense of our user research as a whole, the team decided to conduct an affinity mapping exercise. We pulled out key insights & user quotes from both the qualitative and quantitative research to find commonalities and themes across the research.</p>
-							<div class="projectimage">
-								<img class="img-lg" src="assets/img/socialaza_affinity-wall.jpg" alt="Affinity wall created from survey & interview data" onclick="openModal(this,'socialaza_affinity-wall.jpg');">
-								<p class="subtitle" aria-hidden="true">Affinity wall created from survey & interview data</p>
-							</div>
-							<p>Based on our analysis, we decided to include seven types of activities in the application - camping, trekking, local tours, adventure sports, food, sports events, and movies. We also defined & refined specific features of the application that participants had called out as critical.</p>
-							<div class="col-xl-5 col-lg-12 projectimage">
-								<img class="img-md" src="assets/img/socialaza_ideation1.jpg" onclick="openModal(this,'socialaza_ideation1.jpg');">
-								<p class="subtitle centered">Task workflow for session setup in the website </p>
-
-							</div> 
-							<div class="col-xl-6 col-lg-12 projectimage">
-								<img class="img-md" src="assets/img/socialaza_ideation2.jpg" onclick="openModal(this,'socialaza_ideation2.jpg');">
-								<p class="subtitle centered">Draft features in the app</p>
-							</div>
-							<p>We decided to design & build out the following sections in the app</p>
-							<ul class="indented-bullets">
-								<li>Feed - see activities in your area</li>
-								<li>Activity page - view details about when, where, who</li>
-								<li>Create an activity - What, when, where, how many </li>
-								<li>Reviews/Ratings - No text reviews; badges instead of stars</li>
-								<li>Profile - View upcoming/past activities, badges</li>
-								<li>Messages & notifications - pre-event communication with group/co-participant</li>
-								
-							</ul>
-						</section>
-
-						<section id="design">
-						 	<div class="projectcontent">
-						 		<h2>Design iterations</h2>
-						 		<p>After identifying the high-level sections within the app, we created a site map that also served as a starting point for wireframing & prototyping. </p>
-						 		<div class="col-xl-8 offset-xl-2 col-lg-12 projectimage-nohover">
-									<img class="img-lg" src="assets/img/socialaza_info-arch.png">
-								</div>
-						 									
-						 		<h3>Wireframes</h3>
-						 		<p>We then went through three stages of sketching and wireframing. At each stage, we evaluated the design against our user research insights and also went through multiple design critique sessions with fellow classmates.</p>
-						 		<!-- <div class="col-10 offset-1">
-							 		<ul class="img-grid">
-							 			<li>
-							 				<img class="img-v" alt src="assets/img/socialaza_sketch1-1.jpg" onclick="openModal(this,'socialaza_sketch1-1.jpg');">
-							 			</li>
-							 			<li>
-							 				<img class="img-v" alt src="assets/img/socialaza_sketch3.jpg" onclick="openModal(this,'socialaza_sketch3.jpg');">
-							 			</li>
-							 			<li>
-							 				<img class="img-v" alt src="assets/img/socialaza_sketch5.jpg" onclick="openModal(this,'socialaza_sketch5.jpg');">
-							 			</li>
-							 			<li>
-							 				<img class="img-v" alt src="assets/img/socialaza_sketch1-2.jpg" onclick="openModal(this,'socialaza_sketch1-2.jpg');">
-							 			</li>
-							 			<li>
-							 				<img class="img-v" alt src="assets/img/socialaza_sketch2.jpg" onclick="openModal(this,'socialaza_sketch2.jpg');">
-							 			</li>
-							 		</ul>
-							 	</div> -->
-							 	<div class="col-xl-3 col-lg-5 col-md-12 projectimage mb">
-									<img class="img-v" alt src="assets/img/socialaza_sketch1-1.jpg" onclick="openModal(this,'socialaza_sketch1-1.jpg');">
-								</div>
-								<div class="col-xl-4 col-lg-5 col-md-12 projectimage mb">
-									<img class="img-v" alt src="assets/img/socialaza_sketch2.jpg" onclick="openModal(this,'socialaza_sketch2.jpg');">
-								</div>
-								<div class="col-xl-4 col-lg-5 col-md-12 projectimage mb">
-									<img class="img-v" alt src="assets/img/socialaza_sketch3.jpg" onclick="openModal(this,'socialaza_sketch3.jpg');">
-								</div>
-								<div class="col-xl-3 col-lg-5 col-md-12 projectimage mb" >
-									<img class="img-v" alt src="assets/img/socialaza_sketch4.jpg" onclick="openModal(this,'socialaza_sketch4.jpg');">
-								</div> 
-								<div class="col-xl-8 col-lg-10 col-md-12 projectimage mb">
-									<img class="img-v" alt src="assets/img/socialaza_sketch5.jpg" onclick="openModal(this,'socialaza_sketch5.jpg');">
-								</div> 
-								<p class="subtitle centered" aria-hidden="true">Sketches & wireframes</p>
-
-								<h3>Low-fidelity mockups</h3>
-						 		<p>After sketching a few ideas, we had a good sense of what would go on each screen and where. We moved on to creating low-fidelity mockups using Figma, so we could better visualize what the screens would look like.</p>
-						 		<div class="row">
-							 		<div class="col-xl-10 offset-xl-1 col-lg-12 projectimage mb centered">
-										<img class="img-v" alt src="assets/img/socialaza_lofi1.jpg" onclick="openModal(this,'socialaza_lofi1.jpg');">
-									</div>
-									<div class="col-xl-4 col-lg-4 projectimage mb centered">
-										<img class="img-v" alt src="assets/img/socialaza_lofi2.jpg" onclick="openModal(this,'socialaza_lofi2.jpg');">
-									</div>
-									<div class="col-xl-4 col-lg-4 projectimage mb centered">
-										<img class="img-v" alt src="assets/img/socialaza_lofi3.jpg" onclick="openModal(this,'socialaza_lofi3.jpg');">
-									</div>
-									<div class="col-xl-4 col-lg-4 projectimage mb centered">
-										<img class="img-v" alt src="assets/img/socialaza_lofi4.jpg" onclick="openModal(this,'socialaza_lofi4.jpg');">
-									</div>
-								</div>
-						 </section>
-						 <section id="prototype">
-						 	<div class="projectcontent">
-							 	<h2>High-fidelity prototype</h2>
-								<p>After finalizing our wireframe designs, we started building the high-fidelity prototype. We divided a total of 18 screens between the two UX designers, while the visual designer on the team created our logo and other visual assets that could be used across the app.</p>
-								<p>We used Google's Material design guidelines to guide and inspire the aesthetic of our app and ensure consistency between the screens designed by different team members. We worked both individually and collaboratively using Figma.</p>
-								<p> I specifically worked on the homepage feed & profile pages.</p>
-							 	
-							 	<div class="row">
-							 		<div class="col-xl-3 offset-xl-1 col-lg-6 offset-lg-0 projectimage-nohover">
-							 			<img class="img-vtall" src="assets/img/socialaza_home-feed.jpg" onclick="playGif(this)">
-							 		</div>
-							 		<div class="col-xl-7 col-lg-6 vertical-align">
-							 			<p>On opening the app, a user would see a list of activities in their city, with the popular activities displayed on at the top of the list. Each activity card shows the activity name, date, time & group size as well as the poster's name and the signup deadline.</p>
-							 		</div>
-							 	</div>
-
-							 	<hr class="h-rule mt">
-							 	<div class="row">
-							 		<div class="col-xl-3 order-xl-2 col-lg-6 order-lg-2 col-md-12 projectimage-nohover mt">
-							 			<img class="img-vtall" src="assets/img/socialaza_home-navmenu.jpg" onclick="playGif(this)">
-							 		</div>
-							 		<div class="col-xl-7 offset-xl-1 order-xl-1 col-lg-6 offset-lg-0 order-lg-1 col-md-12 vertical-align">
-							 			<p>We chose the Tabs component from Material UI to categorize the different types of activities. Also included were categories like "Near me" which would sort the list by distance, and "Expiring soon" which would sort by the signup deadline.</p>
-							 		</div>
-							 		
-							 	</div>
-								 
-							 	<hr class="h-rule mt">
-							 	<div class="row">
-							 		<div class="col-xl-3 offset-xl-1 col-md-6 offset-md-0 col-sm-12 projectimage-nohover mt">
-							 			<img class="img-vtall" src="assets/img/socialaza_profile.jpg">
-							 		</div>
-							 		<div class="col-xl-3 col-md-6 col-sm-12 projectimage-nohover mt">
-							 			<img class="img-vtall" src="assets/img/socialaza_edit-profile.jpg">
-							 		</div>
-							 		<div class="col-xl-4 col-lg-12 vertical-align">
-							 			<p>On the profile page, a user can view their information and profile picture. They can also see the badges they have received. In edit mode, a user is able to update their profile information and select additional interests. Selecting additional interests in the profile updates the homepage feed with new activities.</p>
-							 		</div>
-							 	</div>
-
-							 	<hr class="h-rule mt">
-							 	<div class="row">
-							 		<div class="col-xl-3 order-xl-2 col-md-6 offset-md-0 col-sm-12 projectimage-nohover mt">
-							 			<img class="img-vtall" src="assets/img/socialaza_saved-events.jpg">
-							 		</div>
-							 		<div class="col-xl-3 order-xl-3 col-md-6 offset-md-0 col-sm-12 projectimage-nohover mt">
-							 			<img class="img-vtall" src="assets/img/socialaza_past-events.jpg">
-							 		</div>
-							 		<div class="col-xl-4 offset-xl-1 order-xl-1 col-lg-12 vertical-align">
-							 			<p>Under the profile section, a user could also view events saved as favorites, and past events they attended.</p>
-							 		</div>
-							 	</div>
-
-						 		<h3>Visual design</h3>
-						 		<p>The visual designer on the team created a unique identity for each type of activity - a default icon and color. These activity colors were used throughout the app, as a placeholder card background, and as a user's interest under profile. They also created fun and engaging badges for our review system, so users could show appreciation to their fellow participants.</p>
-							 	<div class="col-xl-5 offset-xl-1 projectimage">
-									<img class="img-lg " src="assets/img/socialaza_activities.jpg" alt="Types of activities in Socialaza" onclick="openModal(this,'socialaza_activities.jpg');">
-									<p class="subtitle centered mb" aria-hidden="true">Types of activities in Socialaza</p>
-								</div> 
-								<div class="col-xl-5 projectimage">
-									<img class="img-lg" src="assets/img/socialaza_badges.jpg" alt="Socialaza badges" onclick="openModal(this,'socialaza_badges.jpg');">
-									<p class="subtitle centered mb" aria-hidden="true">Socialaza badges</p>
-								</div>
-
-								<h3>Final prototype</h3>
-								<div class="col-12 centered mobile-view mt">
-									<!-- <iframe width="411" height="731" src="https://xd.adobe.com/embed/e0370a63-1734-4754-49f3-6bcf57ab9d99-9606/?fullscreen" frameborder="0" allowfullscreen></iframe> -->
-									<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="412" height="781" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FVW8nMBhmY5ZMwlxJIpy0NtQH%2FSocialaza%3Fpage-id%3D7%253A0%26node-id%3D204%253A891%26viewport%3D-1571%252C419%252C0.4222502112388611%26scaling%3Dmin-zoom%26starting-point-node-id%3D204%253A891" allowfullscreen></iframe>
-								</div>
-							</div>
-						</section>
-						<section id="learnings">
-						 	<h2>Lessons learned</h2>
-						 	<div class="col-10 offset-1">
-					 		<ul class="indented-bullets">
-					 			<li><span class="bold">Take an MVP approach to product design -</span> Time is a crucial resource while shipping an end-to-end product. It's easy to get caught up in making pixel perfect designs, or wanting your product to have all the features when you ship it, but the end goal is to have the product ready by a certain deadline. It is important to start with the critical functionality of the product, and then scale up to include "nice to have" features at a later date.</li>
-					 			<li><span class="bold">Many heads are better than one -</span> Get feedback from as many people as possible. Everyone will have a different perspective and listening to other people's opinions can help to validate your design or challenge your biases, and generally lead to a better designed product.
-					 			<li><span class="bold">Privacy & security concerns -</span> Users of social networking platforms are very aware & concered with ensuring their information is kept safe, and their online activities are secure & enjoyable. Lack of privacy, security, and accountability in a social networking platform can have serious implications in the real world, if they are not appropriately addressed in the product strategy & design.</li>
-
-					 		</ul>
-						</section>
+					 	</p>
+					 	<p>We also conducted in-depth interviews with six participants to learn more about people's preferences towards certain activities and the reasons behind them. We also wanted to understand users' privacy and security concerns while using this app. </p>
 					</div>
 				</div>
-			</div>		
-	    </main>
+				<div class="col-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_affinity-wall.jpg" onclick="openModal(this,'socialaza_affinity-wall.jpg');">
+						<p class="subtitle">Affinity wall created from survey data</p>
+					</div> 
+				</div>
+				<div class="col-12">
+					<div class="projectcontent">
+						<h4>INTERVIEW INSIGHTS</h4>
+						<ul>
+							<li>Activities like shopping and buying groceries revolve around personal choice and people are uncomfortable doing these with strangers.</li>
+							<li>People are most comfortable being shown around the city by a stranger, but are also concerned about the person's credentials.</li>
+							<li>Similarly, credentials matter for adventure sports as people feel safer with someone experienced.</li>
+							<li>Food preferences and restrictions might make it hard to find companions to go to restaurants with.</li>
+						</ul>
 
-	    <footer>
-	    	<p><a href="index.html">Purva Sane</a><i class="fa fa-copyright"></i>2019. All rights reserved.</p>
-	    </footer>
+					 	<h3>Concept Refinement</h3>
+					 	<p>From our user research, we narrowed down our initial scope and focused on seven different types of activities that research participants had expressed the most interest in. We also spent time refining features like matching people based on interest rather than letting them select and creating a review system rather than rating people.</p>
+				 	</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_ideation1.jpg" onclick="openModal(this,'socialaza_ideation1.jpg');">
+						<!-- <p class="subtitle">Task workflow for session setup in the website </p> -->
+					</div> 
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_ideation2.jpg" onclick="openModal(this,'socialaza_ideation2.jpg');">
+					</div> 
+				</div>
+				<div class="col-12">
+					<div class="projectcontent">
+						<p class="subtitle centered">Draft of feature list and workflows of Socialaza app</p>
+				 		<h3>Iterative Design</h3>
+				 		<p>We then iterated on the design through sketches and wireframes and low fidelity prototypes. At each stage, we evaluated the design based on user research insights and feedback received from peers, bringing the design back to the problem we were trying to solve.</p>
+				 	</div>
+				</div>
+				<div class="col-12">
+					<div class="projectimage mb">
+						<img src="assets/img/socialaza_lofi1.jpg" onclick="openModal(this,'socialaza_lofi1.jpg');">
+						<!-- <p class="subtitle">Task workflow for session setup in the website </p> -->
+					</div> 
+				</div>
+				<div class="col-lg-8 col-md-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_lofi2.jpg" onclick="openModal(this,'socialaza_lofi2.jpg');">
+						<!-- <p class="subtitle">Task workflow for session setup in the website </p> -->
+					</div> 
+				</div>
+				<div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_lofi3.jpg" onclick="openModal(this,'socialaza_lofi3.jpg');">
+					</div> 
+				</div>
+				<div class="col-12">
+					<div class="projectcontent">
+						<p class="subtitle centered">Low fidelity paper prototypes</p>
+				 		<h3>Product Features</h3>
+			 			<ul>
+				 			<li>Sign in using Facebook and find companions from your network to accompany you on your favorite activities.</li>
+				 			<li>Join in for local tours, eating out, camping, trekking, movies, sporting events or adventure sports.</li>
+				 			<li>Get matched with people based on your profile and interests, meet new people and have a good time.</li>
+				 			<li>Give cool badges to your companions and let them know you enjoyed their company.</li>
+			 			</ul>
+				 		<h4>USER FLOW</h4>
+				 	</div>
+				</div>
+				<div class="col-lg-8 offset-lg-2 col-md-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_info-arch.png" onclick="openModal(this,'socialaza_info-arch.png');">
+					</div> 
+				</div>
+				<div class="col-12">
+					<div class="projectcontent">
+				 		<h3>High Fidelity Prototype</h3>
+				 		<p>We used Google's Material Design guidelines to create visual assets of our high fidelity prototype. Each activity type is color-coded, and has a default image associated with it. We created a badge system for users to leave reviews for their companions.</p>
+				 	</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_activities.jpg" onclick="openModal(this,'socialaza_activities.jpg');">
+					</div> 
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="projectimage">
+						<img src="assets/img/socialaza_badges.jpg" onclick="openModal(this,'socialaza_badges.jpg');">
+					</div> 
+				</div>
+				<div class="col-12">
+					<p class="subtitle centered">Socialaza visual assets</p>
+					<div class="projectimage mt">
+						<img src="assets/img/socialaza_prototype.jpg" onclick="openModal(this,'socialaza_prototype.jpg');">
+						<p class="subtitle centered">Product screenshots</p>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-	    <script type="text/javascript" src="assets/js/custom.js"></script>
-	</body>
+					</div> 
+				</div>
+				<div class="col-12">
+					<div class="projectcontent">
+						<h3>Implementation</h3>
+				 		<p>Being a social computing application, we needed to think about the scalability and distributed nature of the system. Social computing applications have variable levels of engagement and user behaviors, which had to be taken into account during both design and implementation.</p>
+				 		<p>To implement this project as an end-to-end system, we created an MVP product using the Flask web framework and SQLite as the database engine. We implemented key features of the app, like creating a new activity, editing user profile. We also implemented Facebook login using OAuth.</p>
+				 		<p>To make the functional prototype more app-like, we tweaked the CSS so that the pages would load in a mobile configuration.</p>
+				 	</div>
+				</div>
+		 	</div><!--end of row -->
+		</div><!--end of container -->
+    </main><!-- /.container -->
+
+    <footer>
+    	<p><a href="index.html">Purva Sane</a><i class="fa fa-copyright"></i>2019. All rights reserved.</p>
+    </footer>
+
+	<script>
+	var modal = document.getElementById('myModal');
+	function openModal(clicked,filesrc) {
+	    modal.style.display = 'block';
+	    var modalImg = document.getElementById("img01");
+	    var clicked_src='assets/img/'+filesrc
+	    modalImg.src = clicked_src;
+	}
+
+	function closeModal() {
+	    modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+    	if (event.target == modal) {
+    	    modal.style.display = "none";
+    	}
+	}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+    	window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
 </html>

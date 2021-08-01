@@ -9,13 +9,11 @@
 :root {
 	/*Color palette*/
     --primary: rgba(133, 20, 75, 1);
+    /*--secondary: #BAF73C;
+    --slight: #f0ff73;
+    --sdark: #85c400;*/
     --greydark: #202020 ;
     --socialaza-green: #34BB66;
-    --space: 1rem;
-}
-
-:target {
-	scroll-margin-top: 5rem;
 }
 
 * { 
@@ -25,7 +23,7 @@
 
 html {
 	scroll-behavior: smooth !important;
-	font-size: 20px;
+	font-size: 18px;
 } 
 
 body {
@@ -34,7 +32,7 @@ body {
 	height: 100%; 
 	color: #202020;
 	font-family: 'Catamaran', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1;
 }
 
@@ -103,15 +101,6 @@ a:hover, a:focus {
 	background:#2B2E31;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto,
-.col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto,
-.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto,
-.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto,
-.col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
 .centered {
 	text-align: center !important;
 }
@@ -156,33 +145,6 @@ a:hover, a:focus {
 	background-color: var(--sdark);
 }
 
-.mb {
-	margin-bottom: 40px;
-}
-
-.mt {
-	margin-top: 40px;
-}
-
-.mb2 {
-	margin-bottom: 80px;
-}
-
-.mt2 {
-	margin-top: 80px;
-}
-
-.vertical-align {
-	display: flex;
-	align-items: center;
-}
-
-.h-rule {
-	border: 1px solid #e3e3e3;
-	margin-bottom: 0;
-
-}
-
 /*	################################################################
 	MODAL
 ################################################################# */
@@ -207,9 +169,7 @@ a:hover, a:focus {
     margin: auto;
     margin-top: 35px;
     display: block;
-    width: auto;
     max-width: 80vw;
-    height: auto;
 	max-height: 80vh;
 }
 
@@ -373,6 +333,7 @@ a:hover, a:focus {
 	HOMEPAGE
 ################################################################# */
 #home {
+	height: 100vh;
 	padding-top:91px;
 }
 
@@ -419,6 +380,9 @@ a:hover, a:focus {
 }
 
 #portfolio h2{
+    padding: 5px 0px;
+    position: relative;
+    top: 0;
     padding: 80px 0px 20px 0px;
     font-size: 3rem;
 }
@@ -524,20 +488,13 @@ a:hover, a:focus {
 	/*max-width: 15%;*/
 	height: 100vh;
 	background-color: black;
-	--offset: var(--space);
-	position: sticky;
-	top: var(--offset);
-	max-height: calc(100vh - var(--offset) * 2);
 }
-
-
 
 #myNavbar2 {
 	display: flex;
 	flex-direction: column;
 	margin-top: 50px;
 	position: relative;
-	/*left: 45%;*/
 	align-self: flex-start;
 }
 
@@ -547,6 +504,7 @@ a:hover, a:focus {
 }
 
 .project-navbar-toggler {
+	/*background: var(--socialaza-green) !important;*/
 	border: solid 1px var(--socialaza-green) !important;
 	padding: .2rem .6rem;
 	font-size: 0.9rem;
@@ -562,9 +520,10 @@ a:hover, a:focus {
     display: block;
     padding: 12px 0px;
     color: var(--socialaza-green);
+    text-transform: capitalize;
 	padding: 10px 0px;
 	margin: 10px 0px 0px 0px;
-	font-size: 1rem;
+	font-size: 0.9rem;
 }
 
 .nav-item2 a:focus, .nav-item2 a:hover {
@@ -600,7 +559,6 @@ a:hover, a:focus {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	position: relative;
 }
 
 .project-content {
@@ -624,13 +582,12 @@ a:hover, a:focus {
 
 .project-content section h2{
 	margin-top: 70px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	text-align: center;
 }
 
 .project-content section h3{
-	margin-top: 45px;
-	margin-bottom: 15px;
+	margin-top: 25px;
 }
 
 .about-subtitle {
@@ -646,10 +603,6 @@ a:hover, a:focus {
 	width: 90px;
 }
 
-.bold {
-	font-weight: 800;
-}
-
 .indented-bullets {
 	margin-left: 2rem;
 }
@@ -660,8 +613,8 @@ a:hover, a:focus {
 
 .light {
 	font-family: 'Catamaran', sans-serif;
-	font-weight: 600;
-	margin: 30px 0px 30px 0px;
+	font-weight: 300;
+	margin: 5px 0px 25px 0px;
 }
 
 .projectimage-nohover {
@@ -669,67 +622,22 @@ a:hover, a:focus {
     transition: 0.3s;
 }
 
-.projectimage:hover {
-	opacity: 0.8;
-}
-
 .projectimage {
     text-align: center;
     cursor: -moz-zoom-in; 
     cursor: -webkit-zoom-in; 
-    cursor: pointer;
+    cursor: zoom-in;
     transition: 0.3s;
-    display: inline-block;
-
 }
 
-.img-lg {
-	width: 85%;
+.projectimage:hover {
+	opacity: 0.8;
+}
+
+.projectimage img{
+	width: 98%;
 	height: auto;
-}
-
-.img-md {
-	width: 95%;
-	height: auto;
-}
-
-.img-v {
-	width: auto;
-	height: auto;
-	max-width: 95%;
-	max-height: 50vh;
-}
-
-.img-vtall {
-	width: auto;
-	height: auto;
-	max-width: 95%;
-	max-height: 65vh;
-	border: solid 1px #e3e3e3;
-}
-
-.img-grid {
-	display: flex;
-	flex-wrap: wrap;
-	list-style-type: none;
-}
-
-.img-grid::after {
-content:"";
-flex-grow: 10;
-}
-
-.img-grid li {
-  height: 40vh;
-  flex-grow: 1;
-}
-
-.img-grid li > img {
-  max-height: 100%;
-  /*min-width:  100%;*/
-  width: auto;
-  object-fit: cover;
-  vertical-align: bottom;
+	/*max-height: 80vh;*/
 }
 
 /*	################################################################
@@ -739,7 +647,9 @@ footer {
 	height: 60px;
 	width: 100%;
 	margin: 0px;
+	/*margin-top: 50px;*/
 	padding: 15px 0px;
+	/*background-color: #fafafa;*/
 	border-top: solid 1px #e3e3e3;
 	position: relative;
 	bottom: 0;
@@ -770,7 +680,7 @@ footer i {
 	ABOUT
 ################################################################# */
 #about-header {
-	/*background-image: url(../../assets/img/165.png);*/
+	background-image: url(../../assets/img/165.png);
     margin-top: 91px;
     height: 270px;
     display: flex;
@@ -804,12 +714,10 @@ footer i {
 
 /************************************** media queries***************************************************************************/
 @media screen and (max-width: 1200px) {	
-	/*col-xl*/
 
 }
 
 @media screen and (max-width: 992px) {
-	/*col-lg*/
 	h1 {
 		font-size: 2.2rem;
 	}
@@ -862,7 +770,7 @@ footer i {
 	}
 
 	#herotext h1 {
-		margin-top: 20px;
+		margin-top: 100px;
 	}
 
 	#emoji {
@@ -873,6 +781,12 @@ footer i {
 		padding: 0px 15px;
 	}
 
+	.project-navbar-toggler {
+		position: absolute;
+		top: 20px;
+		left: 15%;
+	}
+
 	.project-header-content {
 		width: 37.5%;
 	}
@@ -881,45 +795,17 @@ footer i {
 		margin-top: 30px;
 		font-size: 1.1rem;
 	}
-
-	#side-nav {
-		/*max-width: 15%;*/
-		display: block;
-		height: 100vh;
-		background-color: black;
-		--offset: var(--space);
-		position: sticky;
-		top: var(--offset);
-		/*left:35%;*/
-		max-height: calc(100vh - var(--offset) * 2);
-	}
-
-	.project-navbar-toggler {
-		position: absolute;
-		left: 35%;
-	}
-
-	#myNavbar2 {
-		padding-right: 15px;
-	}
-
-	/*.mobile-hide {
-		display: none !important;
-	}*/
 }
 
 @media screen and (max-width: 768px) {
-	/*col-md*/
 	.desktop-tablet {
 		display: none;
 	}
-	.mobile-view {
-		display: none !important;
+
+	#navbarResponsive2 {
+		top: 50px;
+		max-width: 90%;
 	}
-/*
-	.desktop-hide {
-		display: none !important;
-	}*/
 
 	#myNavbar2 {
 		margin-top: 15px;
@@ -961,9 +847,9 @@ footer i {
 }
 
 @media screen and (max-width: 576px) {
-	/*col-sm*/
-	/*.desktop-hide {
+	.mobile-view {
 		display: none !important;
-	}*/
+	}
+
 
 }
