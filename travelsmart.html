@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+		<link rel="icon" href="assets/favicon/favicon.ico">
 
 		<title>Purva Sane UX Portfolio - TravelSmart</title>
 
@@ -28,21 +28,39 @@
 		<!-- Custom files -->
 		<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 		<link rel="stylesheet" href="assets/css/style_test.css">
-		<script type="text/javascript" src="assets/js/custom.js"></script>
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+					const observer = new IntersectionObserver(entries => {
+						entries.forEach(entry => {
+							const id = entry.target.getAttribute('id');
+							if (entry.intersectionRatio > 0) {
+								document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
+							} else {
+								document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
+							}
+						})
+					});
+
+					// Track all sections that have an `id` applied
+					document.querySelectorAll('section[id]').forEach((section) => {
+						observer.observe(section);
+					});
+				});
+		</script>
 	</head>
 
 	<body>
 	  	<header>
 	  		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
 	            <a class="back-link" href="index.html#portfolio"><img id="back-img" src="assets/img/back.svg"> Back to Projects</a>
-	            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-	                <span class="navbar-toggler-icon"></span>
+	            <button class="navbar-toggler main-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	                <i class="fas fa-bars"></i>
 	            </button>
 	            <div class="collapse navbar-collapse" id="navbarResponsive">
 	                <ul class="navbar-nav ml-auto">
-	                    <li class="nav-item">
-	                        <!-- <a class="nav-link" href="about.html">About</a> -->
-	                    </li>
+	                    <!-- <li class="nav-item">
+	                        <a class="nav-link" href="about.html">About</a>
+	                    </li> -->
 	                    <li class="nav-item">
 	                        <a class="nav-link" id="resume" href="assets/files/PurvaSane_Resume.pdf" target="_blank">Resume</a>
 	                    </li>
@@ -54,207 +72,233 @@
 <!-- *****************************************************************************************************************
 CONTENT
 ***************************************************************************************************************** -->
-	<div id="myModal" class="modal">
-  		<span class="close" onclick="closeModal()">&times;</span>
-  		<img class="modal-content" id="img01" alt="">
-	</div>
+		<main role="main">
+			<div id="myModal" class="modal">
+		  		<span class="close" onclick="closeModal()">&times;</span>
+		  		<img class="modal-content" id="img01" alt="">
+			</div>
 
-	<div class="container projectheader">
-        <h1>TravelSmart</h1>
+			<div class="project-header" id="travelsmart-header">
+				<img class="project-header-image mobile-view" src="assets/img/travel-smart_jumbotron.png">
+				<div class="project-header-content">
+					<h1>TravelSmart</h1>
+					<p>A smart packing assistant that helps users keep track of their essential items, and provides reminders when items are forgotten.</p>
+				</div> 
+			</div>
 
-	 	<div class="row">
-		 	<div class="col-lg-6 col-md-12">
-		 		<div class="projectcontent">
-		 			<h2>Problem Statement</h2>
-		 			<p>How can we make packing and trip-planning easier and alleviate stress associated with taking a trip?</p>
-		 			<h2>Problem Description</h2>
-		 			<p>Packing and planning a trip can be very stressful, and can take away from the excitement of going away on a vacation. Knowing what to bring and making sure that they have everything they need, is a very daunting task that may travellers are apprehensive about. Travelers employ various methods to make sure they pack appropriately, but none of these methods are foolproof and inevitably, something gets left behind.</p>
-		 			<p>We wanted to address this problem by creating a packing system that takes the stress out of trip planning.</p>
-		 		</div>
-		 	</div>
-		 	
-		 	<div class="col-lg-5 offset-lg-1 col-md-12">
-		 		<div class="projectcontent">
-			 		<h2>Project Details</h2>
-			 		<p><b>Duration:</b> 
-			 		<br>Sept 2017 - December 2017</p>
-			 		<p><b>Role:</b>
-			 		<br>User Researcher, Prototyping Engineer</p>
-			 		<h2>Key Takeaways</h2>
-			 		<ul>
-			 			<li>I learned new UX research methods like experience prototyping, diary study and cultural probes.</li>
-			 			<li>Designing for emerging mobile and context-aware technologies has its own set of challenges. Technology behind the design may not be available comercially, or is prohibitively expensive. Futuristic design concepts need to be backed by technological feasibility.</li>
-			 		</ul>
-		 		</div>
-		 	</div>
-		 	<div class="col-12">
-			 	<div class="projectcontent">
-				 	<h2>Proposed Solution</h2>
-				 	<p>Our product is a smart packing aid that uses the Internet of Things (IoT) to make packing stress-free and simple. Our product consists of two parts: a tracking hub located in the suitcase and several stickers which can be applied to various objects. The hub keeps track of the &ldquo;stickered" items and reminds the user to pack items they have forgotten.</p>
-					<div class="videowrap centered">
-		 				<iframe width="854" height="480" src="https://www.youtube.com/embed/i2wWPtuO0VE?rel=0" allowfullscreen></iframe>
-		 			</div>
+			<div class="project-body">
+				<div class="col-xl-2 col-lg-3 col-md-3 mobile-view">
+					<nav class="navbar navbar-expand-lg navbar-light bg-dark" role="navigation" id="side-nav">
+		            	<div id="navbarResponsive2">
+							<ul class="navbar-nav ml-auto" id="myNavbar2">
+								<li class="nav-item2 travelsmart">
+									<a class="" href="#about">About this project</a>
+								</li>
+								<li class="nav-item2 travelsmart">
+									<a class="" href="#research">User research</a>
+								</li>
+								<li class="nav-item2 travelsmart">
+									<a class="" href="#prototype">Prototype</a>
+								</li>
+								<li class="nav-item2 travelsmart">
+									<a class="" href="#demo">Product demo</a>
+								</li>
+								<li class="nav-item2 travelsmart">
+									<a class="" href="#learnings">Lessons learned</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
 				</div>
-			</div>
-			<div class="col-12">
-				<div class="projectcontent">
-				 	<h2>Process</h2>
-				 	<p>After initial user research, we conceptualized a product which was validated with users multiple times and reiterated the design based on feedback. We also focused a great deal on the technology we would use to prototype the product, not constraining ourselves to technology currently available commercially.</p>
-				 	<h3>Observations/Interviews</h3>
-				 	<p>We conducted informal interviews with 5 participants who shared their recent packing experiences and the major breakdowns that occurred during their trips. We also conducted observation sessions with 2 participants as they were packing for a trip.</p>
-				 	<h4>INSIGHTS</h4>
-				 	<ul>
-				 		<li>Forgetting to pack essential items brings about feelings of regret and disappointment which negatively affects the overall trip experience.</li>
-				 		<li>Travelers are most stressed moments before leaving the house, worrying if they have forgotten something.</li>
-				 		<li>Routine items that are used right before leaving, are often the most forgotten.</li>
-				 	</ul>
-				 	<h3>Diary Study</h3>
-				</div>
-			</div>
-			<div class="col-12">
-				<div class="projectcontent">
-					<p>We conducted a diary study with three participants who recorded their interactions with their luggage for five days - three days before their trips when they were packing and during the first two days of their trip.</p>
-				</div>
-			</div>
-			<div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_diary-study1.png" alt="Diary entry by participant - Image 1 of 3" onclick="openModal(this,'travel-smart_diary-study1.png')">
-				 	<p class="subtitle" aria-hidden="true">Diary entry by participant</p>
-				</div>
-			</div>
-			<div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_diary-study2.png" alt="Diary entry by participant - Image 2 of 3" onclick="openModal(this,'travel-smart_diary-study2.png')">
-				 	<p class="subtitle" aria-hidden="true">Diary entry by participant</p>
-				</div>
-			</div>
-			<div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_diary-study3.png" alt="Diary entry by participant - Image 3 of 3" onclick="openModal(this,'travel-smart_diary-study3.png')">
-				 	<p class="subtitle" aria-hidden="true">Diary entry by participant</p>
-				</div>
-			</div>
-			<div class="col-12">
-				<div class="projectcontent">
-			 		<h3>Experience Prototyping</h3>
-			 		<p>We selected five scenarios which would help us understand how the system would integrate into the user's lives and learn if it would add value to the user's packing process. We recruited five participants to enact these scenarios and observe them as they did so. After enacting the scenarios, we debriefed with the participants, asking them for their impressions about the concept and the product mockups. We also asked participants how autonomous they expected the system to be, how intrusive they thought the system was, and if they would be comfortable using the system in everyday life.</p>
-			 	</div>
-			</div>
-			<div class="col-md-10 offset-md-1 col-sm-12">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_xp-prototyping.png" alt="Participants enacting various scenarios" onclick="openModal(this,'travel-smart_xp-prototyping.png')">
-				 	<p class="subtitle" aria-hidden="true">Participants enacting various scenarios</p>
-				</div>
-			</div>
-			<div class="col-12">
-				<div class="projectcontent">			 		
-			 		<h3>IoT Prototyping</h3>
-		 			<p>To demonstrate the working of the product, we created a prototype using Bluetooth sensors and buzzers. Using the <a href="appinventor.mit.edu/">MIT App Inventor</a>, we created a sample Android application which used the phone's Bluetooth to communicate with several <a href="https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/overview">Adafruit Feather 32u4 Bluefruit LE</a> which represented &ldquo;stickered" items. The functional prototype did not include the implementation of the tracking hub due to time constraints, but in the commercial product, the tracking hub placed inside the suitcase would automatically check for missing items when the suitcase lid is closed, and notify the user of items they have not packed.</p>
-		 		</div>
-			</div>
-			<div class="col-lg-8 offset-lg-0 col-md-12">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_sysarch.png" alt="Image of system architecture" onclick="openModal(this,'travel-smart_sysarch.png')">
-				 	<p class="subtitle" aria-hidden="true">System architecture</p>
-				</div>
-			</div>
-			<div class="col-lg-4 offset-lg-0 col-md-6 offset-md-3">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_prototype.jpg" alt="Image of functional prototype" onclick="openModal(this,'travel-smart_prototype.jpg')">
-				 	<p class="subtitle" aria-hidden="true">Functional prototype</p>
-				</div>
-			</div>
+
+	 			<div class="col-xl-10 col-lg-9 col-md-9 col-sm-12">
+					<div class="project-content">
+						<section id="about">
+				 			<h2>About this project</h2>
+				 			<ul class="about-subtitle">
+				 				<li><div class="strong travelsmart">Timeline</div>September - December 2017</li>
+				 				<li><div class="strong travelsmart">My team</div>4 </li>
+				 				<li><div class="strong travelsmart">My role</div>User Researcher, Prototyping Engineer</li>
+				 				<li><div class="strong travelsmart">Type</div>Academic project</li>
+						 	</ul>
+						 	<p>TravelSmart is a packing assistant that helps users tag essential items, and find them using a mobile app. A central hub keeps track of all items and can notify the user via the app when an item goes outside the detection boundary.</p>
+				 			<h3>Defining the problem</h3>				 			
+				 			<p>Most people feel anxious before a trip, and want to make sure they have everything they will need. They feel disappointed or angry with themselves when they realize they’ve missed something important after arriving at their destination. Packing for a trip can be very stressful, and can take away from the excitement of going away on a vacation. Knowing what to bring and making sure you have everything you need is a daunting task that many travelers are apprehensive about. Travelers employ various methods to make sure they pack appropriately, but none of these methods are foolproof and inevitably, something gets left behind.</p>
+				 			<p>We wanted to address this problem by creating a packing system that takes the stress out of trip-planning. We framed our design problem using the following "How-Might-We" question:</p>
+				 			<h4 class="light travelsmart centered">How can we make packing stress-free and help people feel confident that they have everything they will need for their travels?</h4>
+				 		</section>
+
+				 		<section id="research">
+						 	<h2>User Research</h2>
+						 	<p>We wanted to understand the current landscape of packing, and the techniques and tools people used to prepare for travel. We employed different research methodologies to gather insights from users about their current experiences, as well as our proposed solution.</p>
+				 			<h3>Interviews</h3>
+						 	<p>We conducted interviews with 8 participants who had either recently returned from a trip within the last 2 weeks or were planning to go on a trip in the next 2 weeks. Our goal was to understand how participants usually prepared for a trip, and how they recovered from forgetting important items. We also wanted to understand the emotional impact of preparing for travel, and the challenges encountered during travel. Our participants shared their past packing experiences and the major breakdowns that occurred during their trips. For those participants who were about to embark on trips, we also delved into how they were getting ready for their upcoming trip, and the tools and techniques they typically use to making their packing go smoothly.</p>
+						 	<p>During our interviews, participants mentioned over and over again that <span class="bold"> they are always stressed in the moments before leaving the house, worrying if they have forgotten something.</span></p>
+						 	<p>Other interview insights included:</p>
+						 	<ul class="indented-bullets">
+						 		<li>The more organized, or experienced packers tend to pack items in phases, starting with items they won't need in their daily life. For items that are needed till the last minute, they tend to keep these items together on a table, or in a small bag/container.</li>
+						 		<li>Some items are usually needed in the final moments leading up to leaving. These items are often most likely to be forgotten. Items that may not be a part of a participant's daily life also tend to get left behind.
+						 			<ul class="indented-bullets">
+						 				<li>2 of 8 participants recalled a recent trip where they forgot their toothbrush & face wash because they had used the items on the morning of the trip, and then forgotten to pack them.</li>
+					 					<li>3 of 8 participants mentioned that in the past they had needed specific items for a trip, like some sunscreen lotion for a beach vacation, but had forgotten about it since they don't usually use that item in daily life.</li>
+						 			</ul>
+						 		</li>
+						 		<li>People employ different tools, techniques, and visual aids to help them remember what to pack. 
+						 			<ul class="indented-bullets">
+						 				<li>6 of 8 participants used checklists, either paper or digital, and had dedicated bags/containers/space in their suitcase for related items (medicines, makeup, etc)</li>
+						 				<li>3 of 8 participants mentioned they have dual sets of certain items so one set can stay home and the other can be packed in the suitcase beforehand.</li>
+						 				<li>5 of 8 participants said they usually pack from "room to room", starting with one room of the house, packing everything they would need from that room, and then moving on to the next.</li>
+						 			</ul>
+						 		</li>
+						 		<li>Forgetting essential items leads to feelings of regret and disappointment which affect the travel experience as a whole.</li>
+						 	</ul>
+						 		
+			 				<h3>Diary Study</h3>
+							<p>We conducted a diary study with three participants who were about to embark on a trip. We asked them to record their interactions with their luggage for five days - three days before their trip when they were packing and the first two days of their trip.</p>
+							<div class="row">
+								<div class="projectimage-nohover mb col-xl-4 col-lg-4">
+								 	<img class="img-vtall" src="assets/img/travel-smart_diary-study1.png" alt>
+								</div>
+								<div class="projectimage-nohover mb col-xl-4 col-lg-4">
+								 	<img class="img-vtall" src="assets/img/travel-smart_diary-study2.png" alt>
+								</div>
+								<div class="projectimage-nohover mb col-xl-4 col-lg-4">
+								 	<img class="img-vtall" src="assets/img/travel-smart_diary-study3.png" alt>
+								</div>
+							</div>
+							<p class="subtitle centered" aria-hidden="true">Diary entries by participants</p>
+
+							<h3>Research synthesis</h3>
+							<p>Using a virtual whiteboard tool, we noted our insights from the user interviews, and participant feedback from the diary study & subsequent debrief. After looking at all the data across the various research studies, we realized that <span class="bold">forgetting items was a very big pain point for almost all travelers,</span> and decided that we wanted to create a system that addressed this aspect of the travel experience.</p>
+							<div class="projectimage">
+								<img class="img-lg" src="assets/img/travel-smart_affinity-wall.jpg" alt="Affinity wall created from interview & diary study insights" onclick="openModal(this,'travel-smart_affinity-wall.jpg');">
+								<p class="subtitle" aria-hidden="true">Affinity wall created from interview & diary study insights</p>
+							</div>
+						</section>
+
+						<section id="prototype">
+							<h2>Design</h2>
+							<p>Our proposed system consisted of three different components which will work together to help users keep track of items related to their packing - a sticker pack that users can attach to various items they own, a hub that keeps track of all stickers, and an app which can be used to set up stickers & manage reminders.</p>
+							<p>The sticker pack comes with a set of pre-assigned. The user only needs to stick the appropriate stickers on the respective items. Also included are blank stickers which users can encode to items not included in the default sticker pack. Using the mobile app, a user can set up each blank sticker.</p>
+							<p>The stickers would be embedded with a sensor which can provide accurate location information for the corresponding items.The suitcase module acts as a central hub that keeps track of all the stickers, and communicates to the app when the stickers are outside a certain radius.</p>
+							<div class="col-xl-10 offset-xl-1 col-lg-12 projectimage-nohover">
+								<img class="img-lg" src="assets/img/travel-smart_storyboard.png" alt="Storyboard showing how a user interacts with the TravelSmart packing assistant">
+								<p class="subtitle" aria-hidden="true">Storyboard showing how a user interacts with the TravelSmart packing assistant</p>
+							</div>
+
+					 		<h3>"Wizard of Oz" prototyping</h3>
+					 		<p>We selected five scenarios which would help us understand how the system would integrate into the users' lives and add value to their packing process. We recruited five participants to enact these scenarios and observe them as they did so. After enacting the scenarios, we debriefed with the participants, asking them for their impressions about the concept and the product mockups. We also asked participants' feedback on how autonomous they expected the system to be, how intrusive it was, and if they would be comfortable using the system in everyday life.</p>
+					 		<ol class="indented-bullets">
+					 			<li>System will notify missing items from a group if one or more items are not packed - Reminders for packing beach towel when swim suit is placed in the suitcase.</li>
+					 			<li>User creates a packing list in the app and then uses the app to find all itmes in the list.</li>
+					 			<li>User gets notification about forgotten items as they're about to head out the door</li>
+					 			<li>System remembers what was forgotten last time, and sends proactive reminders to pack those items.</li>
+					 			<li>User triggeres a "check" and system notifies users that multiple items have been left behind</li>
+					 		</ol>
+							<div class="projectimage">
+							 	<img class="img-lg" src="assets/img/travel-smart_xp-prototyping.png" alt="Participants enacting various scenarios" onclick="openModal(this,'travel-smart_xp-prototyping.png')">
+							 	<p class="subtitle" aria-hidden="true">Participants enacting various scenarios</p>
+							</div>
+							<p>After observing participants interact with the prototype, we made the following adjustments to our initial system design:</p>
+							<ul class="indented-bullets">
+								<li>Users should be abke to add custom sticker for speciality items that may not be used by others, like photography equipment, or dog walking essentials.</li>
+								<li>Last-minute reminders may cause more stress, so users should be able to set up when the system checks for packed items and sends reminders.</li>
+								<li>Notifications about items forgotten in previous trips are not helpful as every trip might have different packing requirements.</li>
+							</ul>
+
+					 		<h3>System prototyping</h3>
+				 			<p>We created a minimal functional prototype using Bluetooth sensors and buzzers. Using the <a class="bold travelsmart" href="appinventor.mit.edu/">MIT App Inventor</a>, we created a simple Android application which used the phone's Bluetooth to communicate with several <a class="bold travelsmart" href="https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/overview">Adafruit Feather 32u4 Bluefruit LE</a> which represented the stickers. The functional prototype did not include the implementation of the tracking hub due to time constraints. We envision that the commercial product would include a tracking hub that cheks for missing items, when placed inside a suitcase with the lid closed, and notify the user of items they have not packed.</p>
+							<div class="projectimage col-xl-7 col-md-12">
+							 	<img class="img-md" src="assets/img/travel-smart_sysarch.png" alt="TravelSmart system architecture" onclick="openModal(this,'travel-smart_sysarch.png')">
+							 	<p class="subtitle" aria-hidden="true">System architecture</p>
+							</div>
+							<div class="projectimage col-xl-4 col-md-12">
+							 	<img class="img-md" src="assets/img/travel-smart_prototype.jpg" alt="Functional prototype using Adafruit Feather Bluefruit LE & buzzer" onclick="openModal(this,'travel-smart_prototype.jpg')">
+							 	<p class="subtitle" aria-hidden="true">Functional prototype using Adafruit Feather Bluefruit LE & buzzer</p>
+							</div>
 			
-			<div class="col-12">
-				<div class="projectcontent">
-			 		<h3>Sticker Design</h3>
-			 	</div>
-			 </div>
-			 <div class="col-lg-7 col-md-12">
-			 	<div class="projectcontent">
-			 		<p>We spent a significant amount of time on the sticker design. During our user research, participants voiced that they would not want clunky stickers on items they use every day. They were also concerned about the durability of the stickers as everyday items tend to see rough use. Hence, we designed the stickers to look elegant and be long-lasting. The stickers would be paper-thin, like conventional stickers, but also have electronic components embedded in them. We envision that in the near future, such material will be invented, which would make this design possible. </p>
-			 	</div>
-			</div>
-			<div class="col-lg-4 offset-lg-0 col-md-6 offset-md-3">
-				<div class="projectimage">
-				 	<img src="assets/img/travel-smart_branding.jpg" alt="Image of physical design of the stickers and hub" onclick="openModal(this,'travel-smart_prototype.png')">
-				 	<p class="subtitle" aria-hidden="true">Physical design of the stickers and hub</p>
-				</div>
-			</div>
-			<div class="col-12">
-				<div class="projectcontent">
-					<h3>UI Design</h3>
-					<p>We also created mockups for the accompanying TravelSmart app using Sketch and InVision. The app would facilitate interaction with the stickers and tracking hub, and allow users to find items easily. Through the app, users can create custom stickers and get notified when they have forgotten to pack an item.</p>
-					
-				</div>
-			</div>
-			<div class="col-lg-5 col-md-12">
-				<div class="projectcontent centered">
-					<h4>CREATING STICKERS</h4>
-				</div>
-				<div class="row">
-					<div class="col-lg-6 offset-lg-0 col-md-4 offset-md-2">
-						<div class="projectimage">
-							<img src="assets/img/travel-smart_scan1.png" alt="UI for creating custom stickers - Image 1 of 2" onclick="openModal(this,'travel-smart_scan1.png')">
-						</div>
-					</div>
-					<div class="col-lg-6 offset-lg-0 col-md-4 offset-md-0">
-						<div class="projectimage">
-						 	<img src="assets/img/travel-smart_scan2.png" alt="UI for creating custom stickers - Image 2 of 2" onclick="openModal(this,'travel-smart_scan2.png')">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-2 offset-lg-0 col-md-4 offset-md-4">
-				<div class="projectcontent centered">
-					<h4>AUTOMATIC REMINDERS</h4>
-					<div class="projectimage">
-					 	<img src="assets/img/travel-smart_reminder.png" alt="UI for automatic packing reminder" onclick="openModal(this,'travel-smart_reminder.png')">
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-5 col-md-12">
-				<div class="projectcontent centered">
-					<h4>LOCATING MISSING ITEMS</h4>
-				</div>
-				<div class="row">
-					<div class="col-lg-6 offset-lg-0 col-md-4 offset-md-2">
-						<div class="projectimage">
-					 		<img src="assets/img/travel-smart_find1.png" alt="UI for locating items - Image 1 of 2" onclick="openModal(this,'travel-smart_find1.png')">
-						</div>
-					</div>
-					<div class="col-lg-6 offset-lg-0 col-md-4 offset-md-0">
-						<div class="projectimage">
-					 		<img src="assets/img/travel-smart_find2.png" alt="UI for locating items - Image 2 of 2" onclick="openModal(this,'travel-smart_find2.png')">
-						</div>
-					</div>
-				</div>
-			</div>
-	 	</div><!--end of row -->
-	</div><!--end of container -->
+							<h3>Sticker Design</h3>
+							<div class="row">
+								<div class="col-xl-8 col-lg-6 col-md-12 vertical-align">
+									<p>During our user research, participants showed concerns about having clunky stickers on items they use every day. They were also concerned about the durability of the stickers as everyday items tend to see rough use. Hence, we designed the stickers to look elegant and be long-lasting. The stickers would be paper-thin, like conventional stickers, but also have electronic components embedded in them. We envision that in the future, such material will be available, making this design possible.</p>
+								</div>
+								<div class="projectimage-nohover col-xl-4 offset-xl-0 col-lg-6 offset-lg-0 col-md-8 offset-md-2">
+								 	<img class="img-lg" src="assets/img/travel-smart_branding.jpg" alt="Image of physical design of the stickers and hub">
+								 	<p class="subtitle" aria-hidden="true">Prototype of the TravelSmart stickers and hub</p>
+								</div>
+							</div>
 
-	<footer>
-	    	<p><a href="index.html">Designed and implemented by Purva Sane</a><i class="fa fa-copyright"></i>2016 - 2021</p>
+							<h3>UI Design</h3>
+							<p>We also created mockups for the accompanying TravelSmart app using Sketch and InVision. The app would facilitate interaction with the stickers and tracking hub, and allow users to find items easily. Through the app, users can create custom stickers and get notified when they have forgotten to pack an item.</p>
+						 	<div class="row">
+						 		<div class="col-xl-3 offset-xl-1 col-md-6 offset-md-0 col-sm-12 projectimage-nohover mt">
+						 			<img class="img-vtall" alt src="assets/img/travel-smart_scan1.png">
+						 		</div>
+						 		<div class="col-xl-3 col-md-6 col-sm-12 projectimage-nohover mt">
+						 			<img class="img-vtall" alt src="assets/img/travel-smart_scan2.png">
+						 		</div>
+						 		<div class="col-xl-4 col-lg-12 vertical-align">
+						 			<p>TravelSmart comes with 12 out of the box stickers, as well as 4 custom stickers stickers. Users can scan the QR code on the back of the sticker and save it to their TravelSmart app. If users want to tag an item that is not available in the standard sticker pack, they can assign a custom sticker to it and add an appropriate name to the sticker.</p>
+						 		</div>
+						 	</div>
+
+						 	<hr class="h-rule mt">
+						 	<div class="row">
+						 		<div class="col-xl-3 order-xl-2 col-md-6 offset-md-0 col-sm-12 projectimage-nohover mt">
+						 			<img class="img-vtall" alt src="assets/img/travel-smart_find1.png">
+						 		</div>
+						 		<div class="col-xl-3 order-xl-3 col-md-6 offset-md-0 col-sm-12 projectimage-nohover mt">
+						 			<img class="img-vtall" alt src="assets/img/travel-smart_find2.png">
+						 		</div>
+						 		<div class="col-xl-4 offset-xl-1 order-xl-1 col-lg-12 vertical-align">
+						 			<p>Users can manually find items using the app. When a user triggers the find function through the app, the sticker begins to beep, allowing the user to locate the item.</p>
+						 		</div>
+						 	</div>
+
+						 	<hr class="h-rule mt">
+						 	<div class="row">
+						 		<div class="col-xl-3 order-xl-2 col-lg-6 order-lg-2 col-md-12 projectimage-nohover mt">
+						 			<img class="img-vtall" alt src="assets/img/travel-smart_reminder.png">
+						 		</div>
+						 		<div class="col-xl-7 offset-xl-1 order-xl-1 col-lg-6 offset-lg-0 order-lg-1 col-md-12 vertical-align">
+						 			<p>Users can enable or disable automatic reminders for each item. When automatic reminders are enabled, a push notification will be sent to the app if the TravelSmart hub is more than 10 feet from the item(s).</p>
+						 		</div>
+						 	</div>
+						</section>
+
+						<section id="demo">
+							<div class="col-12">
+							 	<div class="projectcontent">
+								 	<h2>Product demo</h2>
+								 	<p>Our product is a smart packing aid that uses the Internet of Things (IoT) to make packing stress-free and simple. Our product consists of two parts: a tracking hub located in the suitcase and several stickers which can be applied to various objects. The hub keeps track of the stickers and reminds the user to pack items they have forgotten using a mobile app.</p>
+									<div class="videowrap centered">
+						 				<iframe width="854" height="480" src="https://www.youtube.com/embed/i2wWPtuO0VE?rel=0" allowfullscreen></iframe>
+						 			</div>
+								</div>
+							</div>
+						</section>
+		 	
+						<section id="learnings">
+					 		<h2>Lessons learned</h2>
+						 	<div class="col-10 offset-1">
+						 		<ul class="indented-bullets">
+						 			<li><span class="bold">Physical product design is more complicated than digital design -</span>Unline a website or mobile application, iterating on a physical product is more difficult, and expensive. More time and thought needs to be given in the ideation stage, and a product idea should be well-formed before investing in the prototype.</li>
+						 			<li><span class="bold">Constraints of emerging technology -</span> When designing a physical product, it is important to evaluate the technology that will make the product succesful, or even possible. The technology behind the design may not be commercially available or can be prohibitively expensive. Futuristic design concepts need to be backed by technological feasibility.</li>
+				 				</ul>
+				 			</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+	    	<p><a href="index.html">Purva Sane</a><i class="fa fa-copyright"></i>2019. All rights reserved.</p>
 	    </footer>
 
-	<script>
-	var modal = document.getElementById('myModal');
-	function openModal(clicked,filesrc) {
-	    modal.style.display = 'block';
-	    var modalImg = document.getElementById("img01");
-	    var clicked_src='assets/img/'+filesrc
-	    // window.alert(clicked_src)
-	    modalImg.src = clicked_src;
-	}
-
-	function closeModal() {
-	    modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-    	if (event.target == modal) {
-    	    modal.style.display = "none";
-    	}
-	}
-	</script>
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	    <script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 </html>
